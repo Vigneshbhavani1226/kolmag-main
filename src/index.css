@@ -1,0 +1,88 @@
+:root {
+  /* Exact Bluehost Deep Navy Theme Colors */
+  --bg-primary: #001838;
+  --bg-secondary: #00122e;
+  --bg-topbar: #000c1d;
+  --bg-navbar: rgba(0, 24, 56, 0.94);
+  --bg-navbar-scrolled: rgba(0, 16, 38, 0.98);
+  --bg-card: rgba(0, 30, 68, 0.7);
+  --bg-dropdown: #001430;
+  
+  /* Accent Colors */
+  --color-brand-cyan: #00f0ff;
+  --color-brand-blue: #0066ff;
+  --bluehost-action-blue: #0056b3;
+  --bluehost-action-hover: #004494;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #b3c5e6;
+  --text-muted: #7c95c2;
+  
+  /* Borders */
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-active: rgba(0, 240, 255, 0.4);
+  
+  /* Bluehost Font Theme: Poppins */
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #002b66;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #004494;
+}
+
+/* Accessibility Focus States */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-brand-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
