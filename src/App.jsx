@@ -6,6 +6,7 @@ import ConsultationModal from './components/ConsultationModal';
 import ServiceDetailModal from './components/ServiceDetailModal';
 import ScrollToTop from './components/ScrollToTop';
 import { Footer } from './components/ContentSections';
+import LiquidMetalShader from './components/ui/liquid-metal-shader';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -62,6 +63,21 @@ export default function App() {
 
   return (
     <div className="app-main-root">
+      {/* 0. Full-Viewport Liquid Metal Animated Background Layer */}
+      <div className="site-liquid-metal-backdrop" aria-hidden="true">
+        <LiquidMetalShader
+          baseColor="#0A0A0A"
+          metalColor="#CCD0E2"
+          highlightColor="#FFFFFF"
+          distortion={0.6}
+          interactive={true}
+          pixelRatio={1.4}
+          scale={0.92}
+          speed={0.45}
+        />
+        <div className="site-liquid-metal-overlay" />
+      </div>
+
       {/* Scroll restoration helper */}
       <ScrollToTop />
 
