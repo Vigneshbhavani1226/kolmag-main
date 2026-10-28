@@ -75,7 +75,6 @@ export default function App() {
           scale={0.92}
           speed={0.45}
         />
-        <div className="site-liquid-metal-overlay" />
       </div>
 
       {/* Scroll restoration helper */}

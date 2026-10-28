@@ -120,7 +120,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 1. Company Overview */}
-      <section className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: '3.5rem' }}>
             <div>
@@ -183,7 +183,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 2. Mission, Vision & Approach */}
-      <section className="section-padding" style={{ background: '#050505', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Purpose & Direction</span>
@@ -237,7 +237,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 3. Core Values */}
-      <section className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Guiding Standards</span>
@@ -266,7 +266,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 4. Technology Capabilities */}
-      <section className="section-padding" style={{ background: '#050505', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Verified Practice Areas</span>
@@ -296,7 +296,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 5. Commitment to Practical Learning & Professional Development */}
-      <section className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Real-World Competence</span>
@@ -333,7 +333,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 6. Why Partner with KOLMAG? */}
-      <section className="section-padding" style={{ background: '#050505' }}>
+      <section className="section-padding">
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Concrete Customer Benefits</span>

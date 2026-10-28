@@ -7,7 +7,7 @@
 .training-hero {
   position: relative;
   padding: 5rem 0 3.5rem;
-  background: radial-gradient(circle at 50% 10%, rgba(22, 119, 255, 0.15) 0%, rgba(0, 140, 255, 0.08) 35%, #050505 75%, #000000 100%);
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }

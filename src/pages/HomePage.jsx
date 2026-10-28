@@ -108,7 +108,7 @@ export default function HomePage({ onOpenConsultation }) {
       <HeroSection onOpenConsultation={onOpenConsultation} />
 
       {/* 2. Customer-Friendly Focus Areas Section */}
-      <section className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">How We Deliver</span>
@@ -146,7 +146,7 @@ export default function HomePage({ onOpenConsultation }) {
       </section>
 
       {/* 3. Core Values Section */}
-      <section className="section-padding" style={{ background: '#050505', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Guiding Principles</span>
@@ -175,7 +175,7 @@ export default function HomePage({ onOpenConsultation }) {
       </section>
 
       {/* 4. Why Partner with KOLMAG? & Company Overview Callout */}
-      <section className="section-padding" style={{ background: '#000000' }}>
+      <section className="section-padding">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: '3rem' }}>
             <div>

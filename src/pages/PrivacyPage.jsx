@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="section-padding" style={{ background: '#000000' }}>
+      <section className="section-padding">
         <div className="container" style={{ maxWidth: '850px' }}>
           <div className="feature-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.75rem', color: '#D1D5DB', lineHeight: '1.7' }}>
             <div>

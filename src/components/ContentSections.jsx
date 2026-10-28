@@ -42,7 +42,7 @@ import { allCapabilities, allIndustries } from '../data/servicesData';
    ========================================================================== */
 export function AboutSection() {
   return (
-    <section id="about" className="section-padding" style={{ background: '#000000' }}>
+    <section id="about" className="section-padding">
       <div className="container">
         <div className="section-header">
           <span className="section-badge">Company Profile</span>
@@ -434,7 +434,7 @@ export function SolutionsSection({ onOpenConsultation }) {
   ];
 
   return (
-    <section id="solutions" className="section-padding" style={{ background: '#050505' }}>
+    <section id="solutions" className="section-padding">
       <div className="container">
         <div className="section-header">
           <span className="section-badge">Solution Architectures</span>
@@ -602,7 +602,7 @@ export function TrainingSection({ onOpenConsultation }) {
   ];
 
   return (
-    <section id="training" className="section-padding" style={{ background: '#000000' }}>
+    <section id="training" className="section-padding">
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Training & Professional Internships</h2>
@@ -922,7 +922,7 @@ export function ContactSection({ onOpenConsultation }) {
   };
 
   return (
-    <section id="contact" className="section-padding" style={{ background: '#000000' }}>
+    <section id="contact" className="section-padding">
       <div className="container">
         <div className="section-header">
           <span className="section-badge">Connect With Us</span>

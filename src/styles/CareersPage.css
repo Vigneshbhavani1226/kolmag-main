@@ -4,7 +4,7 @@
    ========================================================================== */
 
 .careers-portal-root {
-  background-color: #000000;
+  background-color: transparent;
   color: #ffffff;
   min-height: 100vh;
   font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
@@ -18,7 +18,7 @@
 .accenture-careers-hero {
   position: relative;
   padding: 5.5rem 0 4.5rem;
-  background: radial-gradient(circle at 50% 12%, rgba(22, 119, 255, 0.15) 0%, rgba(0, 140, 255, 0.08) 32%, #050811 70%, #000000 100%);
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
   text-align: center;
@@ -216,7 +216,7 @@
    -------------------------------------------------------------------------- */
 .practice-domains-section {
   padding: 5.5rem 0;
-  background: #000000;
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -350,7 +350,7 @@
    -------------------------------------------------------------------------- */
 .career-pathways-section {
   padding: 5.5rem 0;
-  background: #050811;
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -445,7 +445,7 @@
    -------------------------------------------------------------------------- */
 .belonging-culture-section {
   padding: 5.5rem 0;
-  background: #000000;
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -522,7 +522,7 @@
    -------------------------------------------------------------------------- */
 .talent-registry-section {
   padding: 5.5rem 0;
-  background: #050811;
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -920,7 +920,7 @@
    -------------------------------------------------------------------------- */
 .global-stats-trust-strip {
   padding: 3.5rem 0;
-  background: #000000;
+  background: transparent;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }

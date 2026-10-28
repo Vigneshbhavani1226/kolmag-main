@@ -325,7 +325,7 @@ Best regards,
   });
 
   return (
-    <div className="page-view-training" style={{ background: '#000000', color: '#ffffff' }}>
+    <div className="page-view-training" style={{ color: '#ffffff' }}>
       
       {/* ===================================================================
           1. HERO SECTION
@@ -352,7 +352,7 @@ Best regards,
         </div>
 
         {/* Infinite Stats Marquee Ticker (Left to Right) */}
-        <div style={{ marginTop: '3.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', background: 'rgba(5, 5, 5, 0.9)' }}>
+        <div style={{ marginTop: '3.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', background: 'rgba(5, 5, 5, 0.5)', backdropFilter: 'blur(8px)' }}>
           <div className="marquee-wrapper">
             <div className="marquee-track-ltr">
               {[...tickerStats, ...tickerStats].map((item, idx) => (
@@ -370,7 +370,7 @@ Best regards,
       {/* ===================================================================
           2. ALUMNI SPOTLIGHT & HIRING PARTNERS (Infinite Marquee)
           =================================================================== */}
-      <section className="section-padding" style={{ background: '#050505', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header" style={{ marginBottom: '2.5rem' }}>
             <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
@@ -436,7 +436,7 @@ Best regards,
       {/* ===================================================================
           3. TRACK SELECTOR (Interactive Tabs & Category Filters)
           =================================================================== */}
-      <section id="tracks" className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section id="tracks" className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
@@ -583,7 +583,7 @@ Best regards,
       {/* ===================================================================
           5. INTERNSHIP IMMERSION FRAMEWORK (4-Step Process Pipeline)
           =================================================================== */}
-      <section className="section-padding" style={{ background: '#050505', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
@@ -651,7 +651,7 @@ Best regards,
       {/* ===================================================================
           6. APPLY FOR TRAINING OR INTERNSHIP
           =================================================================== */}
-      <section id="apply" className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', textAlign: 'center' }}>
+      <section id="apply" className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)', textAlign: 'center' }}>
         <div id="apply-form"></div>
         <div className="container" style={{ maxWidth: '650px', margin: '0 auto' }}>
           <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '1rem' }}>
@@ -679,7 +679,7 @@ Best regards,
       {/* ===================================================================
           8. FREQUENTLY ASKED QUESTIONS (FAQ Accordion)
           =================================================================== */}
-      <section id="faq" className="section-padding" style={{ background: '#000000', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section id="faq" className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
@@ -723,7 +723,7 @@ Best regards,
       {/* ===================================================================
           9. ACADEMIC PROGRAM TRANSPARENCY NOTICE
           =================================================================== */}
-      <section style={{ background: '#050505', padding: '2rem 0' }}>
+      <section style={{ padding: '2rem 0' }}>
         <div className="container">
           <div className="disclaimer-banner">
             ℹ️ <strong>Academic Program Transparency:</strong> All KOLMAG training and internship tracks focus on verifiable skill acquisition, hands-on portfolio creation, and practical industry competence. We do not make unsupported guarantees of employment, job placement, or stipends. Student internships are dedicated educational learning opportunities and are managed separately from regular employment vacancies.

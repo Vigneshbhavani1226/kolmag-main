@@ -776,7 +776,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
       {/* ============================================================ */}
       {/* 6. GENERAL APPLICATION / TALENT REGISTRY FORM                */}
       {/* ============================================================ */}
-      <section id="apply-form-section" className="section-padding" style={{ background: '#000000' }}>
+      <section id="apply-form-section" className="section-padding">
         <div className="container" style={{ maxWidth: '900px' }}>
           
           <div className="careers-form-container">

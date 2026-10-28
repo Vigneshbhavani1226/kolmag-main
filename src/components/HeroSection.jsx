@@ -8,9 +8,6 @@ import {
 export default function HeroSection({ _onOpenConsultation }) {
   return (
     <section id="home" className="hero-section">
-      {/* Dark Gradient Overlay for Maximum Text Contrast & Legibility over Liquid Metal */}
-      <div className="hero-video-overlay" aria-hidden="true"></div>
-
       <div className="container hero-grid">
         {/* Left Column: Hero Narrative & CTAs */}
         <div className="hero-content">
