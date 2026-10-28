@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, CheckCircle2, ArrowRight, ShieldCheck, Sparkles, Layers, Cpu, Code2, Users, Briefcase } from 'lucide-react';
+import { X, CheckCircle2, ArrowRight, ShieldCheck, Sparkles, Layers } from 'lucide-react';
 import '../styles/ServiceDetailModal.css';
 
 export default function ServiceDetailModal({ service, isOpen, onClose, onConsultService }) {
@@ -62,7 +62,7 @@ export default function ServiceDetailModal({ service, isOpen, onClose, onConsult
         <div className="service-modal-header">
           <div className="service-badge-pill">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" /> 
-            {service.type === 'business' ? 'Business & Non-IT Service' : 'IT & Digital Service'}
+            {service.type === 'industry' ? 'Industry Vertical Practice' : service.type === 'capability' ? 'Enterprise Capability' : service.type === 'business' ? 'Business & Non-IT Service' : 'Technology & Digital Service'}
           </div>
           <h2 id="service-modal-title" className="service-modal-title">
             {service.title}

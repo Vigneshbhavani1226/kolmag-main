@@ -1,11 +1,12 @@
 /* ==========================================================================
    Service Detail Modal ("How KOLMAG Fulfills This Service")
+   Theme: Modern Black, Electric Blue & Crisp White
    ========================================================================== */
 
 .service-modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 10, 25, 0.85);
+  background-color: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 100000;
@@ -17,9 +18,9 @@
 }
 
 .service-modal-container {
-  background: #001633;
-  border: 1px solid rgba(0, 240, 255, 0.28);
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 240, 255, 0.15);
+  background: #080a0f;
+  border: 1px solid rgba(22, 119, 255, 0.35);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 140, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   width: 100%;
   max-width: 760px;
@@ -46,8 +47,8 @@
   top: 1.25rem;
   right: 1.25rem;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-muted);
   width: 36px;
   height: 36px;
   border-radius: 8px;
@@ -59,9 +60,9 @@
 }
 
 .service-modal-close:hover {
-  background: rgba(0, 240, 255, 0.15);
-  color: #00f0ff;
-  border-color: rgba(0, 240, 255, 0.4);
+  background: rgba(22, 119, 255, 0.15);
+  color: #ffffff;
+  border-color: var(--color-brand-blue);
 }
 
 .service-modal-header {
@@ -74,9 +75,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  color: #00f0ff;
+  background: rgba(22, 119, 255, 0.12);
+  border: 1px solid rgba(22, 119, 255, 0.35);
+  color: var(--color-brand-blue);
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 700;
@@ -98,7 +99,7 @@
 
 .service-modal-desc {
   font-size: 0.95rem;
-  color: #b3c5e6;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -120,7 +121,7 @@
 
 .fulfillment-intro {
   font-size: 0.88rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-bottom: 1.25rem;
   line-height: 1.5;
 }
@@ -132,7 +133,7 @@
 }
 
 .fulfillment-step-card {
-  background: rgba(0, 24, 56, 0.65);
+  background: rgba(13, 17, 25, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 1.15rem;
@@ -143,14 +144,16 @@
 }
 
 .fulfillment-step-card:hover {
-  background: rgba(0, 30, 70, 0.9);
-  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(18, 24, 38, 0.95);
+  border-color: var(--color-brand-blue);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(22, 119, 255, 0.2);
 }
 
 .step-num-badge {
-  background: linear-gradient(135deg, rgba(0, 86, 179, 0.8), rgba(0, 240, 255, 0.3));
-  border: 1px solid rgba(0, 240, 255, 0.4);
+  background: linear-gradient(135deg, var(--color-brand-blue-electric), var(--color-brand-blue));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(22, 119, 255, 0.4);
   color: #ffffff;
   font-family: var(--font-heading);
   font-weight: 800;
@@ -174,7 +177,7 @@
 
 .step-desc {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: var(--text-secondary);
   line-height: 1.45;
 }
 
@@ -187,8 +190,8 @@
 }
 
 .meta-card {
-  background: rgba(0, 20, 48, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 17, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 1.25rem;
 }
@@ -215,7 +218,7 @@
 
 .meta-list li {
   font-size: 0.82rem;
-  color: #cbd5e1;
+  color: var(--text-secondary);
   position: relative;
   padding-left: 1.1rem;
   line-height: 1.4;
@@ -225,7 +228,7 @@
   content: '•';
   position: absolute;
   left: 0.2rem;
-  color: #00f0ff;
+  color: var(--color-brand-blue);
   font-weight: bold;
 }
 
@@ -237,9 +240,9 @@
 
 .tool-pill {
   font-size: 0.74rem;
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  color: #d1dff6;
+  background: rgba(22, 119, 255, 0.1);
+  border: 1px solid rgba(22, 119, 255, 0.25);
+  color: var(--text-secondary);
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
 }
@@ -256,8 +259,8 @@
 
 .btn-cancel {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 600;
@@ -268,32 +271,34 @@
 }
 
 .btn-cancel:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(22, 119, 255, 0.12);
+  border-color: var(--color-brand-blue);
   color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.35);
 }
 
 .btn-consult-service {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--bluehost-action-blue) 0%, #004494 100%);
+  background: linear-gradient(135deg, var(--color-brand-blue-electric) 0%, #004fc2 100%);
   color: #ffffff;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.88rem;
   padding: 0.65rem 1.4rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(22, 119, 255, 0.4);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .btn-consult-service:hover {
-  background: linear-gradient(135deg, #0066cc 0%, #00367a 100%);
+  background: linear-gradient(135deg, #008CFF 0%, #004fc2 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.45);
-  border-color: #00f0ff;
+  box-shadow: 0 6px 20px rgba(0, 140, 255, 0.55);
+  border-color: #ffffff;
 }
 
 @media (max-width: 680px) {
@@ -312,3 +317,4 @@
     justify-content: center;
   }
 }
+

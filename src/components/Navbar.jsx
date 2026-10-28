@@ -1,61 +1,42 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   ChevronDown, 
   ArrowRight, 
   Menu, 
-  X, 
-  ShieldCheck, 
-  Cloud, 
-  Cpu, 
-  Code2, 
-  Headphones, 
-  PhoneCall, 
-  Play,
-  Briefcase,
-  Users,
-  Search,
-  ShoppingCart,
-  TrendingUp,
-  Palette,
-  BarChart3,
-  Layers,
-  Rocket,
-  CheckCircle2,
-  FileCheck2,
-  Building2,
-  Globe2,
-  Lock,
-  Server
+  X,
+  ChevronRight
 } from 'lucide-react';
+import { 
+  capabilitiesCol1, 
+  capabilitiesCol2, 
+  industriesCol1, 
+  industriesCol2, 
+  servicesMap 
+} from '../data/servicesData';
 import '../styles/Navbar.css';
 
-export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectService }) {
+export default function Navbar({ _onReplayIntro, onOpenConsultation, onSelectService }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPath = location.pathname;
+
+  // Close dropdowns when route changes (adjusting state during render)
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (location.pathname !== prevPath) {
+    setPrevPath(location.pathname);
+    setServicesDropdownOpen(false);
+    setMobileMenuOpen(false);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
-      const sections = ['home', 'about', 'services', 'solutions', 'work', 'training', 'careers', 'contact'];
-      const scrollPosition = window.scrollY + 120;
-
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -66,7 +47,6 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         setServicesDropdownOpen(false);
-        setSolutionsDropdownOpen(false);
         setMobileMenuOpen(false);
       }
     };
@@ -74,213 +54,52 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // TAB A: IT & DIGITAL SERVICES (10 categories)
-  const itServices = [
-    {
-      icon: <Code2 className="w-4 h-4" />,
-      title: 'Software & Application Development',
-      desc: 'Custom enterprise software, microservices & scalable backends.',
-      href: '#services-it'
-    },
-    {
-      icon: <Globe2 className="w-4 h-4" />,
-      title: 'Website & Mobile App Development',
-      desc: 'High-performance web applications, iOS & Android platforms.',
-      href: '#services-it'
-    },
-    {
-      icon: <Cpu className="w-4 h-4" />,
-      title: 'AI, Machine Learning & Data Science',
-      desc: 'Predictive intelligence, custom LLM agents & data engineering.',
-      href: '#services-it'
-    },
-    {
-      icon: <ShieldCheck className="w-4 h-4" />,
-      title: 'Cybersecurity & Information Security',
-      desc: 'VAPT security testing, zero-trust audits & SOC defense.',
-      href: '#services-it'
-    },
-    {
-      icon: <Cloud className="w-4 h-4" />,
-      title: 'Cloud, Hosting & DevOps',
-      desc: 'Agent hosting, multi-cloud Kubernetes & automated CI/CD pipelines.',
-      href: '#services-it'
-    },
-    {
-      icon: <Server className="w-4 h-4" />,
-      title: 'Networking & IT Infrastructure',
-      desc: 'Server hardening, hybrid networks & enterprise cloud architecture.',
-      href: '#services-it'
-    },
-    {
-      icon: <Building2 className="w-4 h-4" />,
-      title: 'Enterprise Software & Business Apps',
-      desc: 'ERP, CRM, workflow automation & system integrations.',
-      href: '#services-it'
-    },
-    {
-      icon: <FileCheck2 className="w-4 h-4" />,
-      title: 'Software Testing & Quality Assurance',
-      desc: 'Automated test suites, security scans & QA validation.',
-      href: '#services-it'
-    },
-    {
-      icon: <TrendingUp className="w-4 h-4" />,
-      title: 'Digital Marketing & SEO',
-      desc: 'Search optimization, analytics tracking & enterprise brand visibility.',
-      href: '#services-it'
-    },
-    {
-      icon: <Headphones className="w-4 h-4" />,
-      title: 'IT Consulting & Technical Support',
-      desc: '24/7 technical advisory, SLA support & infrastructure audits.',
-      href: '#services-it'
-    }
-  ];
-
-  // TAB B: BUSINESS & NON-IT SERVICES (9 categories)
-  const businessServices = [
-    {
-      icon: <Users className="w-4 h-4" />,
-      title: 'Recruitment & Staffing',
-      desc: 'Executive talent search, technical recruiting & workforce staffing.',
-      href: '#services-business'
-    },
-    {
-      icon: <Briefcase className="w-4 h-4" />,
-      title: 'HR & Organizational Support',
-      desc: 'HR policy design, onboarding workflows & compliance support.',
-      href: '#services-business'
-    },
-    {
-      icon: <BarChart3 className="w-4 h-4" />,
-      title: 'Business Consulting & Operations',
-      desc: 'Process rationalization, operating model design & performance scale.',
-      href: '#services-business'
-    },
-    {
-      icon: <Headphones className="w-4 h-4" />,
-      title: 'Customer Support & BPO',
-      desc: 'Multi-tier customer operations, helpdesk & back-office support.',
-      href: '#services-business'
-    },
-    {
-      icon: <Layers className="w-4 h-4" />,
-      title: 'Finance & Administrative Support',
-      desc: 'Operational accounting assistance, records management & admin support.',
-      href: '#services-business'
-    },
-    {
-      icon: <Palette className="w-4 h-4" />,
-      title: 'Creative Design, Media & Branding',
-      desc: 'Corporate visual identity, UX/UI design & brand marketing collateral.',
-      href: '#services-business'
-    },
-    {
-      icon: <ShoppingCart className="w-4 h-4" />,
-      title: 'E-commerce & Digital Commerce',
-      desc: 'Marketplace setups, catalog management & checkout flow design.',
-      href: '#services-business'
-    },
-    {
-      icon: <CheckCircle2 className="w-4 h-4" />,
-      title: 'Procurement & Vendor Coordination',
-      desc: 'Vendor vetting, hardware/software procurement & contract coordination.',
-      href: '#services-business'
-    },
-    {
-      icon: <Search className="w-4 h-4" />,
-      title: 'Market Research & Data Services',
-      desc: 'Competitive intelligence, surveys & secondary market analysis.',
-      href: '#services-business'
-    }
-  ];
-
-  // SOLUTIONS: Organized around customer needs
-  const solutionsList = [
-    {
-      icon: <Rocket className="w-4 h-4" />,
-      title: 'Digital Transformation',
-      desc: 'Legacy system modernization, cloud migration & digital workflows.',
-      href: '#solutions'
-    },
-    {
-      icon: <Building2 className="w-4 h-4" />,
-      title: 'Enterprise Technology Solutions',
-      desc: 'Scalable CRM, ERP, and API gateways for enterprise resilience.',
-      href: '#solutions'
-    },
-    {
-      icon: <Cpu className="w-4 h-4" />,
-      title: 'AI-Powered Business Automation',
-      desc: 'Autonomous AI agents, document parsing & predictive workflows.',
-      href: '#solutions'
-    },
-    {
-      icon: <Lock className="w-4 h-4" />,
-      title: 'Cybersecurity & Risk Management',
-      desc: 'Zero-trust architecture, compliance auditing & vulnerability response.',
-      href: '#solutions'
-    },
-    {
-      icon: <Cloud className="w-4 h-4" />,
-      title: 'Cloud Infrastructure Solutions',
-      desc: 'High-availability agent hosting, Kubernetes & DevOps automation.',
-      href: '#solutions'
-    },
-    {
-      icon: <BarChart3 className="w-4 h-4" />,
-      title: 'Business Process Optimization',
-      desc: 'Operational re-engineering, BPO support & overhead minimization.',
-      href: '#solutions'
-    },
-    {
-      icon: <Layers className="w-4 h-4" />,
-      title: 'Startup & SME Technology',
-      desc: 'Agile MVP engineering, cost-optimized cloud & growth roadmaps.',
-      href: '#solutions'
-    },
-    {
-      icon: <Globe2 className="w-4 h-4" />,
-      title: 'Industry-Specific Solutions',
-      desc: 'Targeted architectures for Healthcare, Fintech, Education & Logistics.',
-      href: '#solutions'
-    }
-  ];
-
-  const handleNavClick = (sectionId) => {
-    setActiveSection(sectionId);
+  // Handle click on any capability or industry item
+  const handleServiceItemClick = (name, type) => {
     setServicesDropdownOpen(false);
-    setSolutionsDropdownOpen(false);
     setMobileMenuOpen(false);
+    
+    const found = servicesMap[name.toLowerCase().trim()];
+    const serviceObj = found || {
+      title: name,
+      desc: `KOLMAG's specialized ${name} practice delivers high-performance architecture, digital reinvention, and enterprise fulfillment.`,
+      type: type || 'capability'
+    };
+
+    if (onSelectService) {
+      onSelectService(serviceObj);
+    } else {
+      navigate('/services');
+    }
   };
 
   const handleExpertClick = (e) => {
-    e.preventDefault();
-    if (onOpenConsultation) {
-      onOpenConsultation();
-    } else {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (e) e.preventDefault();
+    setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
+
+    if (onOpenConsultation) {
+      onOpenConsultation('IT & Digital Services');
+    } else {
+      navigate('/contact');
+    }
   };
 
   return (
     <header className="header-wrapper">
-      {/* Main Horizontal Navbar (Exact Bluehost #001838 Background & Poppins Font) */}
+      {/* Main Horizontal Navbar */}
       <nav 
         className={`main-navbar ${isScrolled ? 'scrolled' : ''}`}
         aria-label="Primary navigation"
       >
         <div className="container navbar-container">
-          {/* Logo & Brand: Highlighted Logo with Hidden Name that reveals on Hover */}
-          <a 
-            href="#home" 
+          {/* Logo & Brand */}
+          <Link 
+            to="/" 
             className="navbar-brand-link" 
-            onClick={() => handleNavClick('home')}
             aria-label="KOLMAG Cyber Technologies Homepage"
             title="KOLMAG Cyber Technologies"
+            onClick={() => setMobileMenuOpen(false)}
           >
             <div className="navbar-logo-badge">
               <img 
@@ -295,238 +114,176 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
               </span>
               <span className="brand-sub-title">CYBER TECHNOLOGIES</span>
             </div>
-          </a>
+          </Link>
 
-          {/* Desktop Horizontal Navigation Menu (Exact Entities Required) */}
+          {/* Desktop Navigation: ONLY Services has a dropdown list per user instruction */}
           <ul className="desktop-nav-menu" role="menubar">
-            {/* 1. Home */}
-            <li className="nav-item" role="none">
-              <a 
-                href="#home" 
-                className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-                onClick={() => handleNavClick('home')}
-                role="menuitem"
-              >
-                Home
-              </a>
-            </li>
-
-            {/* 2. About Us */}
-            <li className="nav-item" role="none">
-              <a 
-                href="#about" 
-                className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-                onClick={() => handleNavClick('about')}
-                role="menuitem"
-              >
-                About Us
-              </a>
-            </li>
-
-            {/* 3. Services (Two-Tab Mega-Menu) */}
+            {/* 1. Services - THE ONLY DROPDOWN MENU */}
             <li 
               className={`nav-item ${servicesDropdownOpen ? 'dropdown-open' : ''}`}
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
               role="none"
             >
-              <a 
-                href="#services" 
-                className={`nav-link ${activeSection === 'services' ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setServicesDropdownOpen(!servicesDropdownOpen);
-                }}
+              <Link 
+                to="/services" 
+                className={`nav-link ${currentPath === '/services' ? 'active' : ''}`}
+                onClick={() => setServicesDropdownOpen(false)}
                 aria-expanded={servicesDropdownOpen}
                 aria-haspopup="true"
                 role="menuitem"
               >
                 Services <ChevronDown className="dropdown-icon" />
-              </a>
+              </Link>
 
-              {/* Unified Services Mega-Menu (Combined IT & Business Offerings) */}
+              {/* Accenture-Style Full-Breadth Services Mega Menu matching user reference screenshot */}
               <div className="mega-dropdown-menu services-mega-menu" role="menu">
-                <div className="services-mega-combined-grid">
-                  {/* Category 1: IT & Digital Services */}
-                  <div className="mega-service-category-col">
-                    <div className="mega-category-header">
-                      <Code2 className="w-4 h-4 text-cyan-400" />
-                      <span>IT & Digital Services</span>
-                      <span className="mega-count-badge">10</span>
-                    </div>
-                    <div className="mega-category-list">
-                      {itServices.map((srv, idx) => (
-                        <div 
-                          key={idx} 
-                          className="offering-card"
-                          onClick={() => {
-                            if (onSelectService) {
-                              onSelectService({ ...srv, type: 'it' });
-                            }
-                            setServicesDropdownOpen(false);
-                          }}
-                          role="menuitem"
-                          tabIndex={0}
-                          style={{ cursor: 'pointer' }}
-                        >
-                          <div className="offering-icon-box">{srv.icon}</div>
-                          <div>
-                            <div className="offering-title">{srv.title}</div>
-                            <div className="offering-desc">{srv.desc}</div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Category 2: Business & Non-IT Services */}
-                  <div className="mega-service-category-col">
-                    <div className="mega-category-header">
-                      <Briefcase className="w-4 h-4 text-cyan-400" />
-                      <span>Business & Non-IT Services</span>
-                      <span className="mega-count-badge">9</span>
-                    </div>
-                    <div className="mega-category-list">
-                      {businessServices.map((srv, idx) => (
-                        <div 
-                          key={idx} 
-                          className="offering-card"
-                          onClick={() => {
-                            if (onSelectService) {
-                              onSelectService({ ...srv, type: 'business' });
-                            }
-                            setServicesDropdownOpen(false);
-                          }}
-                          role="menuitem"
-                          tabIndex={0}
-                          style={{ cursor: 'pointer' }}
-                        >
-                          <div className="offering-icon-box">{srv.icon}</div>
-                          <div>
-                            <div className="offering-title">{srv.title}</div>
-                            <div className="offering-desc">{srv.desc}</div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mega-dropdown-footer">
-                  <span>Explore complete portfolio and specialized fulfillment models across all 19 capabilities.</span>
-                  <a href="#services" className="mega-footer-link" onClick={() => handleNavClick('services')}>
-                    View All Services <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            {/* 4. Solutions (Customer-Problem-Focused) */}
-            <li 
-              className={`nav-item ${solutionsDropdownOpen ? 'dropdown-open' : ''}`}
-              onMouseEnter={() => setSolutionsDropdownOpen(true)}
-              onMouseLeave={() => setSolutionsDropdownOpen(false)}
-              role="none"
-            >
-              <a 
-                href="#solutions" 
-                className={`nav-link ${activeSection === 'solutions' ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setSolutionsDropdownOpen(!solutionsDropdownOpen);
-                }}
-                aria-expanded={solutionsDropdownOpen}
-                aria-haspopup="true"
-                role="menuitem"
-              >
-                Solutions <ChevronDown className="dropdown-icon" />
-              </a>
-
-              {/* Solutions Mega-Menu */}
-              <div className="mega-dropdown-menu solutions-mega-menu" role="menu">
-                <div className="dropdown-header">
-                  Customer-Need-Focused Solution Architectures
-                </div>
-                <div className="solutions-mega-grid">
-                  {solutionsList.map((sol, idx) => (
-                    <a 
-                      key={idx} 
-                      href={sol.href} 
-                      className="offering-card"
-                      onClick={() => handleNavClick('solutions')}
-                      role="menuitem"
+                <div className="accenture-dropdown-container">
+                  {/* Top Headline: Services > */}
+                  <div className="accenture-dropdown-header">
+                    <Link 
+                      to="/services" 
+                      className="accenture-dropdown-title-link"
+                      onClick={() => setServicesDropdownOpen(false)}
+                      title="View all Services & Industries"
                     >
-                      <div className="offering-icon-box">{sol.icon}</div>
-                      <div>
-                        <div className="offering-title">{sol.title}</div>
-                        <div className="offering-desc">{sol.desc}</div>
+                      <span className="accenture-dropdown-title">Services</span>
+                      <span className="accenture-chevron-box" aria-hidden="true">
+                        <ChevronRight className="w-5 h-5 stroke-[2.8]" />
+                      </span>
+                    </Link>
+                  </div>
+
+                  {/* Main Grid: Capabilities (2 sub-columns) & Industries (2 sub-columns) */}
+                  <div className="accenture-mega-grid">
+                    {/* Column 1: Capabilities */}
+                    <div className="accenture-mega-section">
+                      <h3 className="accenture-column-heading">Capabilities</h3>
+                      <div className="accenture-subcolumns">
+                        <div className="accenture-subcolumn">
+                          {capabilitiesCol1.map((item, idx) => (
+                            <button 
+                              key={idx}
+                              type="button"
+                              className="accenture-link-btn"
+                              onClick={() => handleServiceItemClick(item, 'capability')}
+                            >
+                              {item}
+                            </button>
+                          ))}
+                        </div>
+                        <div className="accenture-subcolumn">
+                          {capabilitiesCol2.map((item, idx) => (
+                            <button 
+                              key={idx}
+                              type="button"
+                              className="accenture-link-btn"
+                              onClick={() => handleServiceItemClick(item, 'capability')}
+                            >
+                              {item}
+                            </button>
+                          ))}
+                        </div>
                       </div>
-                    </a>
-                  ))}
-                </div>
-                <div className="mega-dropdown-footer">
-                  <span>Need tailored architecture for your organization?</span>
-                  <button 
-                    onClick={handleExpertClick} 
-                    className="mega-footer-link"
-                    style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-                  >
-                    Discuss Solution Architecture <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                    </div>
+
+                    {/* Column 2: Industries */}
+                    <div className="accenture-mega-section">
+                      <h3 className="accenture-column-heading">Industries</h3>
+                      <div className="accenture-subcolumns">
+                        <div className="accenture-subcolumn">
+                          {industriesCol1.map((item, idx) => (
+                            <button 
+                              key={idx}
+                              type="button"
+                              className="accenture-link-btn"
+                              onClick={() => handleServiceItemClick(item, 'industry')}
+                            >
+                              {item}
+                            </button>
+                          ))}
+                        </div>
+                        <div className="accenture-subcolumn">
+                          {industriesCol2.map((item, idx) => (
+                            <button 
+                              key={idx}
+                              type="button"
+                              className="accenture-link-btn"
+                              onClick={() => handleServiceItemClick(item, 'industry')}
+                            >
+                              {item}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Sub-bar footer */}
+                  <div className="accenture-dropdown-footer">
+                    <span className="accenture-footer-text">
+                      Delivering synchronized engineering, zero-trust cybersecurity, and cloud transformation across 19 capabilities and 20 industry verticals.
+                    </span>
+                    <Link 
+                      to="/services" 
+                      className="accenture-footer-cta" 
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      View All Services Catalog <ArrowRight className="w-4 h-4 ml-1.5" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </li>
 
-            {/* 5. Our Work */}
+            {/* 2. Solutions - Clean Direct Nav Link (No Dropdown) */}
             <li className="nav-item" role="none">
-              <a 
-                href="#work" 
-                className={`nav-link ${activeSection === 'work' ? 'active' : ''}`}
-                onClick={() => handleNavClick('work')}
+              <Link 
+                to="/solutions" 
+                className={`nav-link ${currentPath === '/solutions' ? 'active' : ''}`}
                 role="menuitem"
               >
-                Our Work
-              </a>
+                Solutions
+              </Link>
             </li>
 
-            {/* 6. Training & Internships */}
+
+
+            {/* 4. Training & Internships - Clean Direct Nav Link (No Dropdown) */}
             <li className="nav-item" role="none">
-              <a 
-                href="#training" 
-                className={`nav-link ${activeSection === 'training' ? 'active' : ''}`}
-                onClick={() => handleNavClick('training')}
+              <Link 
+                to="/training-internships" 
+                className={`nav-link ${currentPath === '/training-internships' ? 'active' : ''}`}
                 role="menuitem"
               >
                 Training & Internships
-              </a>
+              </Link>
             </li>
 
-            {/* 7. Careers */}
+            {/* 5. Careers - Clean Direct Nav Link (No Dropdown) */}
             <li className="nav-item" role="none">
-              <a 
-                href="#careers" 
-                className={`nav-link ${activeSection === 'careers' ? 'active' : ''}`}
-                onClick={() => handleNavClick('careers')}
+              <Link 
+                to="/careers" 
+                className={`nav-link ${currentPath === '/careers' ? 'active' : ''}`}
                 role="menuitem"
               >
                 Careers
-              </a>
+              </Link>
             </li>
 
-            {/* 8. Contact */}
+            {/* 6. Contact - Clean Direct Nav Link (No Dropdown) */}
             <li className="nav-item" role="none">
-              <a 
-                href="#contact" 
-                className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-                onClick={() => handleNavClick('contact')}
+              <Link 
+                to="/contact" 
+                className={`nav-link ${currentPath === '/contact' ? 'active' : ''}`}
                 role="menuitem"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
-          {/* 9. Far Right Action CTA: Talk to an Expert */}
+          {/* Far Right Action CTA: Talk to an Expert */}
           <div className="navbar-actions">
             <button 
               onClick={handleExpertClick}
@@ -559,7 +316,11 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
         >
           <div>
             <div className="mobile-drawer-header">
-              <div className="navbar-brand-link">
+              <Link 
+                to="/" 
+                className="navbar-brand-link" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <div className="navbar-logo-badge">
                   <img 
                     src="/assets/kolmag-logo-white.png" 
@@ -573,7 +334,7 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
                   </span>
                   <span className="brand-sub-title" style={{ fontSize: '0.6rem' }}>CYBER TECHNOLOGIES</span>
                 </div>
-              </div>
+              </Link>
               <button 
                 className="mobile-close-btn"
                 onClick={() => setMobileMenuOpen(false)}
@@ -583,30 +344,12 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
               </button>
             </div>
 
+            {/* Mobile Nav List: ONLY Services has accordion per user instruction */}
             <ul className="mobile-nav-list">
-              <li>
-                <a 
-                  href="#home" 
-                  className={`mobile-nav-link ${activeSection === 'home' ? 'active' : ''}`}
-                  onClick={() => handleNavClick('home')}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#about" 
-                  className={`mobile-nav-link ${activeSection === 'about' ? 'active' : ''}`}
-                  onClick={() => handleNavClick('about')}
-                >
-                  About Us
-                </a>
-              </li>
-
               {/* Mobile Services Accordion */}
               <li>
                 <button 
-                  className="mobile-nav-link mobile-accordion-toggle"
+                  className={`mobile-nav-link mobile-accordion-toggle ${currentPath === '/services' ? 'active' : ''}`}
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 >
                   <span>Services</span>
@@ -614,105 +357,93 @@ export default function Navbar({ onReplayIntro, onOpenConsultation, onSelectServ
                 </button>
                 {mobileServicesOpen && (
                   <div className="mobile-sub-menu">
-                    <div style={{ color: '#00f0ff', fontSize: '0.78rem', fontWeight: 700, padding: '0.4rem 0.65rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                      IT & Digital Services (10)
+                    <div style={{ color: '#008CFF', fontSize: '0.8rem', fontWeight: 800, padding: '0.5rem 0.65rem 0.25rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                      Capabilities
                     </div>
-                    {itServices.map((srv, idx) => (
-                      <div 
+                    {[...capabilitiesCol1, ...capabilitiesCol2].map((item, idx) => (
+                      <button 
                         key={idx} 
+                        type="button"
                         className="mobile-sub-link" 
-                        style={{ cursor: 'pointer' }}
-                        onClick={() => {
-                          if (onSelectService) {
-                            onSelectService({ ...srv, type: 'it' });
-                          }
-                          setMobileMenuOpen(false);
-                        }}
+                        style={{ cursor: 'pointer', textAlign: 'left', background: 'none', border: 'none', width: '100%' }}
+                        onClick={() => handleServiceItemClick(item, 'capability')}
                       >
-                        {srv.icon} {srv.title}
-                      </div>
+                        {item}
+                      </button>
                     ))}
-                    <div style={{ color: '#00f0ff', fontSize: '0.78rem', fontWeight: 700, padding: '0.75rem 0.65rem 0.4rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                      Business & Non-IT Services (9)
+
+                    <div style={{ color: '#008CFF', fontSize: '0.8rem', fontWeight: 800, padding: '0.85rem 0.65rem 0.25rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                      Industries
                     </div>
-                    {businessServices.map((srv, idx) => (
-                      <div 
+                    {[...industriesCol1, ...industriesCol2].map((item, idx) => (
+                      <button 
                         key={idx} 
+                        type="button"
                         className="mobile-sub-link" 
-                        style={{ cursor: 'pointer' }}
-                        onClick={() => {
-                          if (onSelectService) {
-                            onSelectService({ ...srv, type: 'business' });
-                          }
-                          setMobileMenuOpen(false);
-                        }}
+                        style={{ cursor: 'pointer', textAlign: 'left', background: 'none', border: 'none', width: '100%' }}
+                        onClick={() => handleServiceItemClick(item, 'industry')}
                       >
-                        {srv.icon} {srv.title}
-                      </div>
+                        {item}
+                      </button>
                     ))}
-                    <a href="#services" className="mobile-sub-link" style={{ color: '#ffffff', fontWeight: 600, marginTop: '0.5rem' }} onClick={() => handleNavClick('services')}>
-                      View All 19 Services →
-                    </a>
+
+                    <Link 
+                      to="/services" 
+                      className="mobile-sub-link" 
+                      style={{ color: '#ffffff', fontWeight: 700, marginTop: '0.65rem', borderTop: '1px solid rgba(22, 119, 255, 0.2)', paddingTop: '0.65rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} 
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <span>View All Services & Catalog</span>
+                      <span>→</span>
+                    </Link>
                   </div>
                 )}
               </li>
 
-              {/* Mobile Solutions Accordion */}
+              {/* Mobile Solutions (Direct Link) */}
               <li>
-                <button 
-                  className="mobile-nav-link mobile-accordion-toggle"
-                  onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                <Link 
+                  to="/solutions" 
+                  className={`mobile-nav-link ${currentPath === '/solutions' ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span>Solutions</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileSolutionsOpen && (
-                  <div className="mobile-sub-menu">
-                    {solutionsList.slice(0, 6).map((sol, idx) => (
-                      <a key={idx} href={sol.href} className="mobile-sub-link" onClick={() => handleNavClick('solutions')}>
-                        {sol.icon} {sol.title}
-                      </a>
-                    ))}
-                  </div>
-                )}
+                  Solutions
+                </Link>
               </li>
 
-              <li>
-                <a 
-                  href="#work" 
-                  className={`mobile-nav-link ${activeSection === 'work' ? 'active' : ''}`}
-                  onClick={() => handleNavClick('work')}
-                >
-                  Our Work
-                </a>
-              </li>
 
+
+              {/* Mobile Training & Internships (Direct Link) */}
               <li>
-                <a 
-                  href="#training" 
-                  className={`mobile-nav-link ${activeSection === 'training' ? 'active' : ''}`}
-                  onClick={() => handleNavClick('training')}
+                <Link 
+                  to="/training-internships" 
+                  className={`mobile-nav-link ${currentPath === '/training-internships' ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Training & Internships
-                </a>
+                </Link>
               </li>
+
+              {/* Mobile Careers (Direct Link) */}
               <li>
-                <a 
-                  href="#careers" 
-                  className={`mobile-nav-link ${activeSection === 'careers' ? 'active' : ''}`}
-                  onClick={() => handleNavClick('careers')}
+                <Link 
+                  to="/careers" 
+                  className={`mobile-nav-link ${currentPath === '/careers' ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Careers
-                </a>
+                </Link>
               </li>
+
+              {/* Mobile Contact (Direct Link) */}
               <li>
-                <a 
-                  href="#contact" 
-                  className={`mobile-nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-                  onClick={() => handleNavClick('contact')}
+                <Link 
+                  to="/contact" 
+                  className={`mobile-nav-link ${currentPath === '/contact' ? 'active' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

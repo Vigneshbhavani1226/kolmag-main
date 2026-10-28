@@ -66,7 +66,7 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
         {submitted ? (
           <div className="modal-success-state">
             <div className="success-icon-badge">
-              <CheckCircle2 className="w-12 h-12 text-cyan-400" />
+              <CheckCircle2 className="w-12 h-12 text-blue-500" />
             </div>
             <h3 className="success-title">Consultation Request Received</h3>
             <p className="success-desc">
@@ -85,7 +85,7 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
           <div>
             <div className="modal-header">
               <span className="modal-eyebrow">
-                <Sparkles className="w-3.5 h-3.5 text-cyan-400" /> KOLMAG Enterprise Advisory
+                <Sparkles className="w-3.5 h-3.5 text-blue-500" /> KOLMAG Enterprise Advisory
               </span>
               <h2 id="modal-headline" className="modal-title">
                 Talk to an Expert
@@ -107,7 +107,6 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
                       name="fullName" 
                       value={formData.fullName} 
                       onChange={handleChange} 
-                      placeholder="e.g. Vignesh Sharma" 
                       required 
                     />
                   </div>
@@ -123,7 +122,6 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
                       name="email" 
                       value={formData.email} 
                       onChange={handleChange} 
-                      placeholder="vignesh@company.com" 
                       required 
                     />
                   </div>
@@ -139,7 +137,6 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
                       name="phone" 
                       value={formData.phone} 
                       onChange={handleChange} 
-                      placeholder="+91 98765 43210" 
                       required 
                     />
                   </div>
@@ -155,7 +152,6 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
                       name="company" 
                       value={formData.company} 
                       onChange={handleChange} 
-                      placeholder="Organization Name" 
                     />
                   </div>
                 </div>
@@ -188,7 +184,6 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
                     name="requirements" 
                     value={formData.requirements} 
                     onChange={handleChange} 
-                    placeholder="Tell us about your project scope, timeline, or consultation needs..." 
                     rows="3" 
                     required 
                   />
@@ -197,7 +192,7 @@ export default function ConsultationModal({ isOpen, onClose, initialInquiryType 
 
               <div className="modal-form-footer">
                 <div className="security-notice">
-                  <Shield className="w-4 h-4 text-cyan-400" />
+                  <Shield className="w-4 h-4 text-blue-500" />
                   <span>Confidential NDA protected • Direct routing to department leads</span>
                 </div>
                 <button type="submit" className="btn-modal-primary" disabled={loading}>
