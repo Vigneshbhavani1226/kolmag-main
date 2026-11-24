@@ -1,12 +1,12 @@
 /* ==========================================================================
    Consultation Modal ("Talk to an Expert")
-   Theme: Modern Black, Electric Blue & Crisp White
+   Theme: Deep Graphite Black (#0E1013), Chrome Silver (#C5CAD3) & Cloud White (#F4F6F8)
    ========================================================================== */
 
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: rgba(14, 16, 19, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 99999;
@@ -18,9 +18,9 @@
 }
 
 .modal-container {
-  background: #080a0f;
-  border: 1px solid rgba(22, 119, 255, 0.35);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 140, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: none;
   border-radius: 16px;
   width: 100%;
   max-width: 640px;
@@ -46,8 +46,8 @@
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  border: 1px solid var(--border);
   color: var(--text-muted);
   width: 36px;
   height: 36px;
@@ -60,9 +60,9 @@
 }
 
 .modal-close-btn:hover {
-  background: rgba(22, 119, 255, 0.15);
-  color: #ffffff;
-  border-color: var(--color-brand-blue);
+  background: var(--silver-subtle);
+  color: var(--text);
+  border-color: var(--silver);
 }
 
 .modal-header {
@@ -77,7 +77,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-brand-blue);
+  color: var(--silver);
   margin-bottom: 0.5rem;
 }
 
@@ -85,14 +85,14 @@
   font-family: var(--font-heading);
   font-size: 1.85rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 
 .modal-subtitle {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
@@ -112,7 +112,7 @@
 .form-group label {
   font-size: 0.82rem;
   font-weight: 600;
-  color: #e2e8f0;
+  color: var(--text);
   letter-spacing: 0.02em;
 }
 
@@ -127,7 +127,7 @@
   left: 0.85rem;
   width: 16px;
   height: 16px;
-  color: #64748b;
+  color: var(--text-muted);
   pointer-events: none;
 }
 
@@ -135,10 +135,10 @@
 .input-with-icon textarea,
 .modal-select {
   width: 100%;
-  background: rgba(14, 18, 26, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--text);
   font-family: var(--font-body);
   font-size: 0.9rem;
   padding: 0.75rem 0.85rem 0.75rem 2.4rem;
@@ -148,7 +148,12 @@
 .modal-select {
   padding-left: 1rem;
   cursor: pointer;
-  background-color: #0e121a;
+  background-color: var(--bg);
+}
+
+.modal-select option {
+  background-color: var(--surface);
+  color: var(--text);
 }
 
 .input-with-icon textarea {
@@ -160,9 +165,9 @@
 .input-with-icon textarea:focus,
 .modal-select:focus {
   outline: none;
-  border-color: var(--color-brand-blue);
-  box-shadow: 0 0 15px rgba(0, 140, 255, 0.35);
-  background: rgba(18, 24, 36, 0.95);
+  border-color: var(--silver);
+  box-shadow: none;
+  background: var(--bg);
 }
 
 .modal-form-footer {
@@ -180,29 +185,31 @@
   color: var(--text-muted);
 }
 
+/* Primary Button (Rule 3) */
 .btn-modal-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--color-brand-blue-electric) 0%, #004fc2 100%);
-  color: #ffffff;
+  background: var(--silver-gradient);
+  color: var(--text-on-light);
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.85rem 1.75rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--silver);
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(22, 119, 255, 0.4);
+  box-shadow: none;
 }
 
 .btn-modal-primary:hover {
-  background: linear-gradient(135deg, #008CFF 0%, #004fc2 100%);
+  background: var(--silver-hover);
+  border-color: var(--silver-hover);
+  color: var(--text-on-light);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 140, 255, 0.55);
-  border-color: #ffffff;
+  box-shadow: none;
 }
 
 /* Success View */
@@ -218,10 +225,10 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: rgba(22, 119, 255, 0.12);
-  border: 1px solid var(--color-brand-blue);
-  box-shadow: 0 0 25px rgba(0, 140, 255, 0.35);
-  color: var(--color-brand-blue);
+  background: var(--silver-subtle);
+  border: 1px solid var(--silver);
+  box-shadow: none;
+  color: var(--silver);
   margin-bottom: 1.25rem;
 }
 
@@ -229,26 +236,26 @@
   font-family: var(--font-heading);
   font-size: 1.6rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
   margin-bottom: 0.75rem;
 }
 
 .success-desc {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.6;
   max-width: 480px;
   margin: 0 auto 1.5rem;
 }
 
 .success-meta-box {
-  background: rgba(12, 16, 24, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.75rem;
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -263,4 +270,3 @@
     padding: 1.5rem;
   }
 }
-

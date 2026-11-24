@@ -108,7 +108,7 @@ export default function HomePage({ onOpenConsultation }) {
       <HeroSection onOpenConsultation={onOpenConsultation} />
 
       {/* 2. Customer-Friendly Focus Areas Section */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">How We Deliver</span>
@@ -145,8 +145,8 @@ export default function HomePage({ onOpenConsultation }) {
         </div>
       </section>
 
-      {/* 3. Core Values Section */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      {/* 3. Core Values Section (Alternating Cloud-White Section - Rule 6) */}
+      <section className="section-padding section-light">
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Guiding Principles</span>
@@ -191,13 +191,13 @@ export default function HomePage({ onOpenConsultation }) {
                 {partnerBenefits.map((benefit, idx) => (
                   <div key={idx} className="partner-benefit-item">
                     <div className="partner-check-icon">
-                      <CheckCircle2 className="w-4 h-4 text-blue-400" style={{ color: '#008CFF' }} />
+                      <CheckCircle2 className="w-4 h-4" style={{ color: 'var(--silver)' }} />
                     </div>
                     <div>
-                      <h4 style={{ color: '#ffffff', fontSize: '0.98rem', fontWeight: 600, marginBottom: '0.25rem' }}>
+                      <h4 style={{ color: 'var(--text)', fontSize: '0.98rem', fontWeight: 600, marginBottom: '0.25rem' }}>
                         {benefit.title}
                       </h4>
-                      <p style={{ color: '#D1D5DB', fontSize: '0.86rem', lineHeight: '1.5' }}>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.86rem', lineHeight: '1.5' }}>
                         {benefit.desc}
                       </p>
                     </div>
@@ -221,40 +221,40 @@ export default function HomePage({ onOpenConsultation }) {
 
             {/* Visual Overview Card */}
             <div className="company-overview-preview-card">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border)', paddingBottom: '1rem' }}>
                 <img 
                   src="/assets/kolmag-logo-white.png" 
                   alt="KOLMAG Logo" 
                   style={{ height: '36px', width: 'auto' }}
                 />
                 <div>
-                  <h3 style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 700, margin: 0 }}>
+                  <h3 style={{ color: 'var(--text)', fontSize: '1.1rem', fontWeight: 700, margin: 0 }}>
                     KOLMAG Cyber Technologies
                   </h3>
-                  <span style={{ fontSize: '0.78rem', color: '#008CFF', letterSpacing: '0.04em' }}>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--silver)', letterSpacing: '0.04em' }}>
                     Private Limited
                   </span>
                 </div>
               </div>
 
-              <p style={{ color: '#D1D5DB', fontSize: '0.92rem', lineHeight: '1.65', marginBottom: '1.5rem' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: '1.65', marginBottom: '1.5rem' }}>
                 Dedicated to engineering secure software architectures, cloud infrastructures, and cybersecurity defense—while providing structured, mentor-guided industrial training to equip students with practical industry competence.
               </p>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem', marginBottom: '1.5rem' }}>
                 <div className="overview-stat-box">
                   <span className="stat-label">Engineering Focus</span>
-                  <strong style={{ color: '#fff', fontSize: '1rem', display: 'block', marginTop: '0.2rem' }}>Software & Cyber</strong>
+                  <strong style={{ color: 'var(--text)', fontSize: '1rem', display: 'block', marginTop: '0.2rem' }}>Software & Cyber</strong>
                 </div>
                 <div className="overview-stat-box">
                   <span className="stat-label">Academy Focus</span>
-                  <strong style={{ color: '#fff', fontSize: '1rem', display: 'block', marginTop: '0.2rem' }}>Hands-On Labs</strong>
+                  <strong style={{ color: 'var(--text)', fontSize: '1rem', display: 'block', marginTop: '0.2rem' }}>Hands-On Labs</strong>
                 </div>
               </div>
 
-              <div style={{ background: 'rgba(22, 119, 255, 0.08)', border: '1px solid rgba(22, 119, 255, 0.25)', borderRadius: '8px', padding: '0.85rem 1rem', display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-                <Sparkles className="w-4 h-4 text-blue-400 flex-shrink-0" style={{ color: '#008CFF' }} />
-                <span style={{ fontSize: '0.82rem', color: '#D1D5DB' }}>
+              <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '8px', padding: '0.85rem 1rem', display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--silver)' }} />
+                <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
                   Explore verified project case studies and student training programs across our specialized portals.
                 </span>
               </div>

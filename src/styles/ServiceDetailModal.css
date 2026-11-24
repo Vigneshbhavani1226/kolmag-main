@@ -1,12 +1,12 @@
 /* ==========================================================================
    Service Detail Modal ("How KOLMAG Fulfills This Service")
-   Theme: Modern Black, Electric Blue & Crisp White
+   Theme: Deep Graphite Black (#0E1013), Chrome Silver (#C5CAD3) & Cloud White (#F4F6F8)
    ========================================================================== */
 
 .service-modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: rgba(14, 16, 19, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 100000;
@@ -18,9 +18,9 @@
 }
 
 .service-modal-container {
-  background: #080a0f;
-  border: 1px solid rgba(22, 119, 255, 0.35);
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 140, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: none;
   border-radius: 16px;
   width: 100%;
   max-width: 760px;
@@ -46,8 +46,8 @@
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  border: 1px solid var(--border);
   color: var(--text-muted);
   width: 36px;
   height: 36px;
@@ -60,24 +60,24 @@
 }
 
 .service-modal-close:hover {
-  background: rgba(22, 119, 255, 0.15);
-  color: #ffffff;
-  border-color: var(--color-brand-blue);
+  background: var(--silver-subtle);
+  color: var(--text);
+  border-color: var(--silver);
 }
 
 .service-modal-header {
   margin-bottom: 1.75rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border);
 }
 
 .service-badge-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(22, 119, 255, 0.12);
-  border: 1px solid rgba(22, 119, 255, 0.35);
-  color: var(--color-brand-blue);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--silver);
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 700;
@@ -92,14 +92,14 @@
   font-family: var(--font-heading);
   font-size: 1.95rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text);
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 
 .service-modal-desc {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -112,7 +112,7 @@
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -133,8 +133,8 @@
 }
 
 .fulfillment-step-card {
-  background: rgba(13, 17, 25, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1.15rem;
   display: flex;
@@ -144,17 +144,17 @@
 }
 
 .fulfillment-step-card:hover {
-  background: rgba(18, 24, 38, 0.95);
-  border-color: var(--color-brand-blue);
+  background: var(--surface-hover);
+  border-color: var(--silver);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(22, 119, 255, 0.2);
+  box-shadow: none;
 }
 
 .step-num-badge {
-  background: linear-gradient(135deg, var(--color-brand-blue-electric), var(--color-brand-blue));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 12px rgba(22, 119, 255, 0.4);
-  color: #ffffff;
+  background: var(--silver);
+  border: 1px solid var(--silver);
+  box-shadow: none;
+  color: var(--text-on-light);
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 0.82rem;
@@ -171,13 +171,13 @@
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
   margin-bottom: 0.3rem;
 }
 
 .step-desc {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.45;
 }
 
@@ -190,8 +190,8 @@
 }
 
 .meta-card {
-  background: rgba(13, 17, 25, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1.25rem;
 }
@@ -200,7 +200,7 @@
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 0.45rem;
@@ -218,7 +218,7 @@
 
 .meta-list li {
   font-size: 0.82rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   position: relative;
   padding-left: 1.1rem;
   line-height: 1.4;
@@ -228,7 +228,7 @@
   content: '•';
   position: absolute;
   left: 0.2rem;
-  color: var(--color-brand-blue);
+  color: var(--silver);
   font-weight: bold;
 }
 
@@ -240,9 +240,9 @@
 
 .tool-pill {
   font-size: 0.74rem;
-  background: rgba(22, 119, 255, 0.1);
-  border: 1px solid rgba(22, 119, 255, 0.25);
-  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
 }
@@ -254,13 +254,14 @@
   justify-content: flex-end;
   gap: 1rem;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border);
 }
 
+/* Secondary Button (Rule 4) */
 .btn-cancel {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #ffffff;
+  border: 1px solid var(--silver);
+  color: var(--silver);
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 600;
@@ -271,34 +272,36 @@
 }
 
 .btn-cancel:hover {
-  background: rgba(22, 119, 255, 0.12);
-  border-color: var(--color-brand-blue);
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 140, 255, 0.35);
+  background: var(--silver-subtle);
+  border-color: var(--silver-hover);
+  color: var(--silver-hover);
+  box-shadow: none;
 }
 
+/* Primary Button (Rule 3) */
 .btn-consult-service {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--color-brand-blue-electric) 0%, #004fc2 100%);
-  color: #ffffff;
+  background: var(--silver-gradient);
+  color: var(--text-on-light);
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.88rem;
   padding: 0.65rem 1.4rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 15px rgba(22, 119, 255, 0.4);
+  border: 1px solid var(--silver);
+  box-shadow: none;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .btn-consult-service:hover {
-  background: linear-gradient(135deg, #008CFF 0%, #004fc2 100%);
+  background: var(--silver-hover);
+  border-color: var(--silver-hover);
+  color: var(--text-on-light);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 140, 255, 0.55);
-  border-color: #ffffff;
+  box-shadow: none;
 }
 
 @media (max-width: 680px) {
@@ -317,4 +320,3 @@
     justify-content: center;
   }
 }
-

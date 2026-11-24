@@ -371,7 +371,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
                   <button 
                     type="button" 
                     onClick={() => setSearchTerm('')} 
-                    style={{ background: 'none', border: 'none', color: '#94a3b8', cursor: 'pointer', padding: '0 4px' }}
+                    style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: '0 4px' }}
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -449,7 +449,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
       <section id="practice-areas" className="practice-domains-section">
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 1.5rem' }}>
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               WHATEVER YOU WANT TO DO
             </span>
             <h2 className="section-title">Explore Our Career Practice Areas</h2>
@@ -502,7 +502,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
       <section className="career-pathways-section">
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 1.5rem' }}>
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.4)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               WHEREVER YOU ARE IN YOUR CAREER
             </span>
             <h2 className="section-title">Designed for Every Stage of Growth</h2>
@@ -600,10 +600,10 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
       {/* ============================================================ */}
       {/* 4. "YOU BELONG HERE" — CULTURE & WELL-BEING / BENEFITS BRIEF  */}
       {/* ============================================================ */}
-      <section className="belonging-culture-section">
+      <section className="belonging-culture-section section-light">
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 1.5rem' }}>
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               YOU BELONG HERE
             </span>
             <h2 className="section-title">Life, Culture & Employee Well-Being</h2>
@@ -643,7 +643,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
         <div className="container">
           
           <div className="section-header" style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 2.5rem' }}>
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.4)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               CURRENT HIRING STATUS
             </span>
             <h2 className="section-title">Engineering Talent Registry & Future Cohorts</h2>
@@ -722,7 +722,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
             <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#ffffff', marginBottom: '0.4rem' }}>
               Practice Areas We Regularly Scout For
             </h3>
-            <p style={{ color: '#94a3b8', fontSize: '0.88rem' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>
               Select a domain below to pre-fill your expression of interest in the talent form:
             </p>
           </div>
@@ -781,13 +781,13 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
           
           <div className="careers-form-container">
             <div className="careers-form-header">
-              <div className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF', marginBottom: '0.85rem' }}>
+              <div className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)', marginBottom: '0.85rem' }}>
                 TALENT NETWORK REGISTRY
               </div>
               <h2 className="careers-form-title">
                 Register with the Engineering Talent Registry
               </h2>
-              <div style={{ fontSize: '0.86rem', color: '#008CFF', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.85rem' }}>
+              <div style={{ fontSize: '0.86rem', color: 'var(--silver)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.85rem' }}>
                 Direct to KOLMAG Technical Talent Acquisition
               </div>
               <p className="careers-form-lead">
@@ -796,10 +796,10 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
             </div>
 
             {talentSubmitted ? (
-              <div style={{ background: 'rgba(22, 119, 255, 0.08)', border: '1px solid #1677FF', borderRadius: '12px', padding: '2.5rem', textAlign: 'center', color: '#fff' }}>
+              <div style={{ background: 'var(--silver-subtle)', border: '1px solid var(--silver)', borderRadius: '12px', padding: '2.5rem', textAlign: 'center', color: '#fff' }}>
                 <CheckCircle2 className="w-12 h-12 text-blue-500" style={{ margin: '0 auto 1rem' }} />
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.65rem' }}>Professional Application Received</h3>
-                <p style={{ fontSize: '0.96rem', color: '#cbd5e1', lineHeight: '1.65', maxWidth: '600px', margin: '0 auto' }}>
+                <p style={{ fontSize: '0.96rem', color: 'var(--text-muted)', lineHeight: '1.65', maxWidth: '600px', margin: '0 auto' }}>
                   Thank you, <strong>{talentFormData.name}</strong>. Your expression of interest for <strong>{talentFormData.domain}</strong> has been logged in our engineering talent registry. Our technical recruiting team will review your qualifications and connect with you directly.
                 </p>
               </div>
@@ -928,7 +928,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
                 {/* Resume Upload (.pdf, .docx) */}
                 <div className="form-group-item">
                   <label className="careers-label">
-                    Resume Upload * <span style={{ color: '#94a3b8', fontWeight: 400 }}>(.pdf, .docx — Max 10MB)</span>
+                    Resume Upload * <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(.pdf, .docx — Max 10MB)</span>
                   </label>
 
                   <input 
@@ -948,7 +948,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
                           <div style={{ fontSize: '0.88rem', fontWeight: 600, color: '#ffffff' }}>
                             {talentFormData.resumeFile.name}
                           </div>
-                          <div style={{ fontSize: '0.74rem', color: '#94a3b8' }}>
+                          <div style={{ fontSize: '0.74rem', color: 'var(--text-muted)' }}>
                             {(talentFormData.resumeFile.size / 1024 / 1024).toFixed(2)} MB • Ready for submission
                           </div>
                         </div>
@@ -956,7 +956,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
                       <button 
                         type="button" 
                         onClick={handleRemoveFile}
-                        style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer', padding: '0.35rem' }}
+                        style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: '0.35rem' }}
                         title="Remove file"
                       >
                         <X className="w-4 h-4" />
@@ -971,7 +971,7 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
                       <div style={{ fontSize: '0.92rem', fontWeight: 600, color: '#ffffff' }}>
                         Click to browse or drag & drop your resume
                       </div>
-                      <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>
+                      <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
                         Supported formats: PDF or DOCX (up to 10MB)
                       </div>
                     </div>
@@ -1037,20 +1037,20 @@ export default function CareersPage({ onOpenConsultation, defaultSearchMode = fa
           {/* Quick Footer Anchors */}
           <div className="quick-anchors-row">
             <Link to="/about" className="quick-anchor-link">About KOLMAG</Link>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>•</span>
+            <span style={{ color: 'var(--border)' }}>•</span>
             <Link to="/services" className="quick-anchor-link">Technology Services</Link>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>•</span>
+            <span style={{ color: 'var(--border)' }}>•</span>
             <Link to="/training-internships" className="quick-anchor-link">Training & Internships</Link>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>•</span>
+            <span style={{ color: 'var(--border)' }}>•</span>
             <button type="button" onClick={() => handleScrollTo('job-search-hub')} className="quick-anchor-link">Job Search Hub</button>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>•</span>
+            <span style={{ color: 'var(--border)' }}>•</span>
             <Link to="/privacy" className="quick-anchor-link">Privacy Policy</Link>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>•</span>
+            <span style={{ color: 'var(--border)' }}>•</span>
             <button 
               type="button" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
               className="quick-anchor-link" 
-              style={{ color: '#008CFF' }}
+              style={{ color: 'var(--silver)' }}
             >
               Back to Top ↑
             </button>

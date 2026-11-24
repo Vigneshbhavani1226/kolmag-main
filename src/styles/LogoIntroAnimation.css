@@ -1,16 +1,13 @@
 /* ==========================================================================
-   Accenture-Inspired Minimalist Logo Animation
-   - Deep obsidian background (#000000 / #05070c)
-   - Company logo in pure radiant WHITE color
-   - Razor-sharp luminous highlight beam sweeping across the white logo
-   - Corporate restraint and precision forward motion
+   Minimalist Logo Animation
+   Theme: Deep Graphite Black (#0E1013), Chrome Silver (#C5CAD3) & Cloud White (#F4F6F8)
    ========================================================================== */
 
 .logo-intro-overlay {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background-color: #000000;
+  background-color: var(--bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +22,12 @@
   pointer-events: none;
 }
 
-/* Subtle background vignette */
+/* Subtle neutral background vignette */
 .intro-grid-bg {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, rgba(22, 119, 255, 0.04) 40%, #000000 80%),
+    radial-gradient(circle at 50% 50%, rgba(197, 202, 211, 0.04) 0%, rgba(23, 26, 31, 0.6) 60%, var(--bg) 90%),
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 100% 100%, 60px 60px, 60px 60px;
@@ -47,7 +44,7 @@
   z-index: 10;
 }
 
-/* Accenture-Inspired Forward Accent Bracket '>' Pulse */
+/* Forward Accent Bracket '>' Pulse */
 .accenture-bracket-accent {
   position: absolute;
   top: 15%;
@@ -55,11 +52,11 @@
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--color-brand-blue);
+  color: var(--silver);
   opacity: 0;
   transform: translateX(-15px) scale(0.8);
   animation: bracketPulse 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
-  text-shadow: 0 0 20px rgba(0, 140, 255, 0.8), 0 0 40px rgba(22, 119, 255, 0.45);
+  text-shadow: none;
   pointer-events: none;
 }
 
@@ -82,15 +79,15 @@
   }
 }
 
-/* Horizontal High-Speed Luminous Light Streak */
+/* Horizontal High-Speed Luminous Silver Light Streak */
 .cyan-streak {
   position: absolute;
   top: 50%;
   left: -40%;
   width: 50%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ffffff, #008CFF, #ffffff, transparent);
-  box-shadow: 0 0 20px #ffffff, 0 0 40px #008CFF, 0 0 80px rgba(22, 119, 255, 0.8);
+  background: linear-gradient(90deg, transparent, #FFFFFF, var(--silver), #FFFFFF, transparent);
+  box-shadow: none;
   transform: translateY(-50%);
   animation: accentureStreakPass 1.2s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
   z-index: 20;
@@ -113,7 +110,7 @@
   }
 }
 
-/* Logo Image Container - White Logo with Highlight Reveal */
+/* Logo Image Container */
 .intro-logo-wrapper {
   position: relative;
   width: 240px;
@@ -126,16 +123,16 @@
   border-radius: 8px;
 }
 
-/* Pure White Company Logo with Ambient Glow Highlight */
+/* Pure White Company Logo (Rule 10: Keep original logo as is) */
 .intro-logo-img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 0 25px rgba(255, 255, 255, 0.65)) drop-shadow(0 0 45px rgba(0, 140, 255, 0.45));
+  filter: brightness(0) invert(1);
 }
 
-/* Radiant Highlight Sweep over the White Logo */
+/* Subtle Silver Highlight Sheen (Rule 7) */
 .logo-highlight-sheen {
   position: absolute;
   top: 0;
@@ -145,9 +142,9 @@
   background: linear-gradient(
     90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.4) 30%, 
-    rgba(255, 255, 255, 0.95) 50%, 
-    rgba(22, 119, 255, 0.8) 70%, 
+    rgba(255, 255, 255, 0.2) 30%, 
+    rgba(255, 255, 255, 0.7) 50%, 
+    rgba(197, 202, 211, 0.4) 70%, 
     transparent 100%
   );
   transform: skewX(-25deg);
@@ -181,7 +178,7 @@
   }
 }
 
-/* White Company Brand Name Typography (Accenture-Inspired) */
+/* White Company Brand Name Typography */
 .intro-brand-name-box {
   display: flex;
   flex-direction: column;
@@ -196,37 +193,37 @@
   font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #ffffff;
+  color: var(--text);
   text-transform: uppercase;
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  text-shadow: none;
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
 .intro-brand-title .accent-bracket {
-  color: var(--color-brand-blue);
+  color: var(--silver);
   font-weight: 800;
-  text-shadow: 0 0 15px var(--color-brand-blue);
+  text-shadow: none;
 }
 
 .intro-brand-subtitle {
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-muted);
   letter-spacing: 0.4em;
   text-transform: uppercase;
   margin-top: 0.4rem;
   opacity: 0.9;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  text-shadow: none;
 }
 
 .intro-line-divider {
   width: 90px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ffffff, var(--color-brand-blue), transparent);
-  box-shadow: 0 0 12px var(--color-brand-blue);
+  background: linear-gradient(90deg, transparent, #FFFFFF, var(--silver), transparent);
+  box-shadow: none;
   margin: 1.1rem auto 0;
   opacity: 0;
   animation: lineExpandAccent 0.8s ease-out 0.75s forwards;
@@ -256,13 +253,13 @@
   }
 }
 
-/* Skip Intro Button */
+/* Skip Intro Button (Rule 4: Secondary Button) */
 .skip-intro-btn {
   position: absolute;
   bottom: 2.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: transparent;
+  border: 1px solid var(--silver);
+  color: var(--silver);
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 500;
@@ -275,10 +272,10 @@
 }
 
 .skip-intro-btn:hover {
-  background: rgba(22, 119, 255, 0.18);
-  border-color: var(--color-brand-blue);
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 140, 255, 0.35);
+  background: var(--silver-subtle);
+  border-color: var(--silver-hover);
+  color: var(--silver-hover);
+  box-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

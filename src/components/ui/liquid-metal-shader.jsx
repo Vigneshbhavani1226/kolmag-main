@@ -87,10 +87,10 @@ void main() {
   color = mix(color, u_metal, silver * 0.88);
   color = mix(color, u_highlight, specular * 0.94);
 
-  // Subtle corporate electric blue reflection highlight (#0066FF / #1677FF)
-  vec3 blueAccent = vec3(0.0, 0.40, 1.0);
-  float blueReflect = smoothstep(0.42, 0.72, field) * (1.0 - specular * 0.7);
-  color = mix(color, blueAccent, blueReflect * 0.16);
+  // Subtle chrome silver reflection highlight (#C5CAD3)
+  vec3 silverAccent = vec3(0.77, 0.79, 0.83);
+  float silverReflect = smoothstep(0.42, 0.72, field) * (1.0 - specular * 0.7);
+  color = mix(color, silverAccent, silverReflect * 0.16);
 
   float softReflection = smoothstep(0.0, 0.13, 0.13 - abs(field - 0.51));
   color = mix(color, u_highlight, softReflection * 0.12);
@@ -161,12 +161,12 @@ function getReducedMotion() {
 export function LiquidMetalShader({
   'aria-hidden': ariaHidden = true,
   'aria-label': ariaLabel = 'Animated liquid metal surface',
-  baseColor = '#0A0A0A',
+  baseColor = '#0E1013',
   className,
   distortion = 0.6,
-  highlightColor = '#FFFFFF',
+  highlightColor = '#F4F6F8',
   interactive = true,
-  metalColor = '#CCD0E2',
+  metalColor = '#C5CAD3',
   pixelRatio = 1.4,
   scale = 0.92,
   speed = 0.45,
@@ -185,11 +185,11 @@ export function LiquidMetalShader({
 
   const currentSettings = React.useMemo(
     () => ({
-      base: parseHexColor(baseColor, '#0A0A0A'),
+      base: parseHexColor(baseColor, '#0E1013'),
       distortion: clamp(distortion, 0, 1.5),
-      highlight: parseHexColor(highlightColor, '#FFFFFF'),
+      highlight: parseHexColor(highlightColor, '#F4F6F8'),
       interactive,
-      metal: parseHexColor(metalColor, '#CCD0E2'),
+      metal: parseHexColor(metalColor, '#C5CAD3'),
       pixelRatio: clamp(pixelRatio, 0.75, 2),
       reduceMotion,
       scale: clamp(scale, 0.6, 2.4),

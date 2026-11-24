@@ -1,36 +1,52 @@
 :root {
-  /* Modern Premium Black, Blue & White Technology Theme */
-  --bg-primary: #000000;
-  --bg-secondary: #050505;
-  --bg-surface: #0a0c10;
-  --bg-topbar: #000000;
-  --bg-navbar: rgba(0, 0, 0, 0.92);
-  --bg-navbar-scrolled: rgba(5, 5, 5, 0.98);
-  --bg-card: rgba(13, 16, 24, 0.85);
-  --bg-card-hover: rgba(18, 24, 38, 0.95);
-  --bg-dropdown: #080a0f;
-  
-  /* Primary Technology Blue Palette */
-  --color-brand-blue: #008CFF;
-  --color-brand-blue-electric: #1677FF;
-  --color-brand-cyan: #008CFF; /* Unified into vivid technology blue */
-  --bluehost-action-blue: #1677FF;
-  --bluehost-action-hover: #0958d9;
-  --blue-glow-subtle: 0 0 20px rgba(0, 140, 255, 0.35);
-  --blue-glow-soft: 0 0 12px rgba(22, 119, 255, 0.22);
-  
-  /* Typography Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: #D1D5DB;
-  --text-muted: #94a3b8;
-  
-  /* Clean Technology Borders & Dual Outlines */
-  --border-light: rgba(255, 255, 255, 0.12);
-  --border-white-subtle: rgba(255, 255, 255, 0.15);
-  --border-blue: rgba(22, 119, 255, 0.35);
-  --border-blue-bright: #1677FF;
-  --border-active: rgba(0, 140, 255, 0.55);
-  
+  /* ==========================================================================
+     NEW COLOUR THEME: Deep graphite black + chrome silver + soft cloud white
+     ========================================================================== */
+  --bg: #0E1013;                 /* Main background (dark sections) */
+  --surface: #171A1F;            /* Cards / panels / navbar / footer */
+  --surface-hover: #1E2229;      /* Panel hover state */
+  --border: #2A2F37;             /* Borders and dividers */
+  --border-light: #2A2F37;       /* Unified divider border */
+  --silver: #C5CAD3;             /* Accent colour (buttons, links, icons, highlights) */
+  --silver-hover: #E3E6EB;       /* Accent hover */
+  --silver-subtle: rgba(197, 202, 211, 0.08); /* Subtle silver tint for secondary button hover */
+  --cloud: #F4F6F8;              /* Light section background */
+  --text: #F4F6F8;               /* Heading and body text on dark backgrounds */
+  --text-muted: #9AA1AC;         /* Muted / secondary text on dark backgrounds */
+  --text-on-light: #14171C;      /* Text on light backgrounds & primary button text */
+  --text-muted-on-light: #4A515C;/* Muted text on light backgrounds */
+
+  /* Legacy variable mappings to guarantee full consistency across codebase */
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg);
+  --bg-surface: var(--surface);
+  --bg-topbar: var(--surface);
+  --bg-navbar: var(--surface);
+  --bg-navbar-scrolled: var(--surface);
+  --bg-card: var(--surface);
+  --bg-card-hover: var(--surface-hover);
+  --bg-dropdown: var(--surface);
+
+  --color-brand-blue: var(--silver);
+  --color-brand-blue-electric: var(--silver);
+  --color-brand-cyan: var(--silver);
+  --bluehost-action-blue: var(--silver);
+  --bluehost-action-hover: var(--silver-hover);
+  --blue-glow-subtle: none;
+  --blue-glow-soft: none;
+
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+
+  --border-white-subtle: var(--border);
+  --border-blue: var(--border);
+  --border-blue-bright: var(--silver);
+  --border-active: var(--silver);
+
+  /* Subtle silver gradient allowed on primary buttons and logo (Rule 7) */
+  --silver-gradient: linear-gradient(135deg, #C5CAD3 0%, #E3E6EB 100%);
+  --silver-gradient-heading: linear-gradient(135deg, #FFFFFF 0%, #C5CAD3 50%, #9AA1AC 100%);
+
   /* Font Theme: Poppins */
   --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -48,8 +64,8 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -58,8 +74,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Custom Scrollbar */
@@ -67,22 +83,25 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #121c2d;
+  background: var(--border);
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #1677FF;
+  background: var(--silver);
 }
 
-/* Accessibility Focus States */
+/* Accessibility Focus States (Rule 8) */
 a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--color-brand-blue);
-  outline-offset: 3px;
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--silver);
+  outline-offset: 2px;
   border-radius: 4px;
 }
 
@@ -92,26 +111,144 @@ button:focus-visible {
   padding: 0 1.5rem;
 }
 
-/* Theme Color Utilities */
+/* Theme Color Utilities mapped cleanly to Silver Accent (Rule 1 & 5) */
 .text-cyan-400,
 .text-cyan-300,
 .text-cyan-500,
-.text-blue-400 {
-  color: var(--color-brand-blue) !important;
-}
-.text-blue-500 {
-  color: var(--color-brand-blue-electric) !important;
-}
-.bg-cyan-500,
-.bg-blue-600 {
-  background-color: var(--color-brand-blue-electric) !important;
+.text-blue-400,
+.text-blue-500,
+.text-slate-400 {
+  color: var(--silver) !important;
 }
 
+.bg-cyan-500,
+.bg-blue-600 {
+  background-color: var(--silver) !important;
+  color: var(--text-on-light) !important;
+}
+
+/* Subtle Silver Heading Gradient (Rule 7) */
 .text-gradient-cyan,
-.text-gradient-blue {
-  background: linear-gradient(135deg, #ffffff 0%, #008CFF 50%, #1677FF 100%);
+.text-gradient-blue,
+.text-gradient-reinvent {
+  background: var(--silver-gradient-heading);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Light (Soft Cloud White) Sections Alternation (Rule 6 & 8) */
+.section-light {
+  background-color: var(--cloud) !important;
+  color: var(--text-on-light) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.section-light .section-badge {
+  color: var(--text-muted-on-light) !important;
+  border-color: #D8DCE3 !important;
+  background: rgba(20, 23, 28, 0.05) !important;
+}
+
+.section-light .section-title,
+.section-light h1,
+.section-light h2,
+.section-light h3,
+.section-light h4,
+.section-light strong {
+  color: var(--text-on-light) !important;
+}
+
+.section-light .section-subtitle,
+.section-light p,
+.section-light .feature-desc,
+.section-light .pillar-card-desc,
+.section-light .pathway-desc {
+  color: var(--text-muted-on-light) !important;
+}
+
+.section-light .feature-card,
+.section-light .value-card,
+.section-light .step-card,
+.section-light .culture-pillar-card,
+.section-light .pipeline-card {
+  background: #FFFFFF !important;
+  border: 1px solid #D8DCE3 !important;
+  color: var(--text-on-light) !important;
+  box-shadow: 0 4px 12px rgba(20, 23, 28, 0.04) !important;
+}
+
+.section-light .feature-card:hover,
+.section-light .value-card:hover,
+.section-light .step-card:hover,
+.section-light .culture-pillar-card:hover,
+.section-light .pipeline-card:hover {
+  background: #FFFFFF !important;
+  border-color: var(--silver) !important;
+  box-shadow: 0 6px 16px rgba(20, 23, 28, 0.08) !important;
+}
+
+.section-light .feature-card .feature-title,
+.section-light .value-card .feature-title,
+.section-light .pillar-card-title,
+.section-light .pathway-title {
+  color: var(--text-on-light) !important;
+}
+
+.section-light .feature-card .feature-desc,
+.section-light .value-card .feature-desc {
+  color: var(--text-muted-on-light) !important;
+}
+
+.section-light .feature-icon-wrapper,
+.section-light .pillar-icon-glow,
+.section-light .pathway-icon-circle {
+  background: rgba(20, 23, 28, 0.06) !important;
+  color: var(--text-on-light) !important;
+  border-color: #D8DCE3 !important;
+}
+
+.section-light .feature-card:hover .feature-icon-wrapper,
+.section-light .culture-pillar-card:hover .pillar-icon-glow {
+  background: var(--silver) !important;
+  color: var(--text-on-light) !important;
+  border-color: var(--silver) !important;
+}
+
+.section-light .card-action-cta {
+  color: var(--text-on-light) !important;
+}
+
+.section-light .card-action-cta:hover {
+  color: var(--text-muted-on-light) !important;
+}
+
+.section-light .card-tag,
+.section-light .tech-tag-chip,
+.section-light .tech-tag {
+  background: rgba(20, 23, 28, 0.06) !important;
+  border-color: #D8DCE3 !important;
+  color: var(--text-muted-on-light) !important;
+}
+
+.section-light .btn-hero-secondary,
+.section-light .btn-dark-outline {
+  background: transparent !important;
+  border: 1px solid var(--text-on-light) !important;
+  color: var(--text-on-light) !important;
+}
+
+.section-light .btn-hero-secondary:hover,
+.section-light .btn-dark-outline:hover {
+  background: rgba(20, 23, 28, 0.06) !important;
+  border-color: var(--text-on-light) !important;
+  color: var(--text-on-light) !important;
+}
+
+.section-light .step-number,
+.section-light .pipeline-step-badge {
+  color: var(--text-on-light) !important;
+  background: rgba(20, 23, 28, 0.06) !important;
+  border-color: #D8DCE3 !important;
 }
 
 @media (max-width: 768px) {
@@ -119,4 +256,3 @@ button:focus-visible {
     padding: 0 1rem;
   }
 }
-

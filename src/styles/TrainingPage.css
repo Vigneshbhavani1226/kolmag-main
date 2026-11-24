@@ -1,6 +1,6 @@
 /* ==========================================================================
    Training & Internships Section Styles
-   Theme: Technology Blue (#008CFF, #1677FF), Pure White & Black
+   Theme: Deep Graphite Black (#0E1013), Chrome Silver (#C5CAD3) & Cloud White (#F4F6F8)
    ========================================================================== */
 
 /* Hero Banner & Pipeline Badge */
@@ -8,30 +8,21 @@
   position: relative;
   padding: 5rem 0 3.5rem;
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
 .training-hero-glow {
-  position: absolute;
-  top: -150px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 350px;
-  background: radial-gradient(ellipse, rgba(22, 119, 255, 0.18), transparent 70%);
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .pipeline-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(22, 119, 255, 0.08);
-  border: 1px solid rgba(22, 119, 255, 0.35);
-  color: #008CFF;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--silver);
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 700;
@@ -40,7 +31,7 @@
   padding: 0.45rem 1.1rem;
   border-radius: 999px;
   margin-bottom: 1.25rem;
-  box-shadow: 0 0 15px rgba(22, 119, 255, 0.15);
+  box-shadow: none;
 }
 
 .hero-cta-group {
@@ -51,75 +42,58 @@
   margin-top: 2rem;
 }
 
+/* Primary Buttons (Rule 3) */
 .btn-blue-primary,
-.btn-cyan-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, #1677FF 0%, #008CFF 100%);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.85rem 1.75rem;
-  border-radius: 8px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 18px rgba(22, 119, 255, 0.35);
-}
-
-.btn-blue-primary:hover,
-.btn-cyan-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(22, 119, 255, 0.55);
-  color: #ffffff;
-}
-
+.btn-cyan-primary,
 .btn-expert-chat {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #1677FF;
-  color: #ffffff;
+  background: var(--silver-gradient);
+  color: var(--text-on-light);
   font-weight: 700;
   font-size: 0.95rem;
   padding: 0.85rem 1.75rem;
   border-radius: 8px;
   text-decoration: none;
-  border: none;
+  border: 1px solid var(--silver);
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(22, 119, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
 }
 
+.btn-blue-primary:hover,
+.btn-cyan-primary:hover,
 .btn-expert-chat:hover {
-  background: #0958d9;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(22, 119, 255, 0.5);
-  color: #ffffff;
+  background: var(--silver-hover);
+  border-color: var(--silver-hover);
+  color: var(--text-on-light);
+  box-shadow: none;
 }
 
+/* Secondary Button (Rule 4) */
 .btn-dark-outline {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  color: #ffffff;
+  background: transparent;
+  color: var(--silver);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.85rem 1.75rem;
   border-radius: 8px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--silver);
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 .btn-dark-outline:hover {
-  background: rgba(22, 119, 255, 0.12);
-  border-color: #1677FF;
-  color: #ffffff;
+  background: var(--silver-subtle);
+  border-color: var(--silver-hover);
+  color: var(--silver-hover);
   transform: translateY(-2px);
 }
 
@@ -169,18 +143,18 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(14, 18, 26, 0.85);
-  border: 1px solid rgba(22, 119, 255, 0.25);
+  background: var(--surface);
+  border: 1px solid var(--border);
   padding: 0.65rem 1.4rem;
   border-radius: 999px;
   white-space: nowrap;
   font-size: 0.9rem;
-  color: #D1D5DB;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: var(--text-muted);
+  box-shadow: none;
 }
 
 .marquee-stat-pill strong {
-  color: #008CFF;
+  color: var(--silver);
   font-size: 1.05rem;
   font-weight: 700;
 }
@@ -189,8 +163,8 @@
    Partner Logo Cards
    ========================================================================== */
 .partner-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 14px 28px;
   display: flex;
@@ -216,24 +190,24 @@
 }
 
 .partner-card:hover {
-  border-color: rgba(22, 119, 255, 0.4);
+  border-color: var(--silver);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(22, 119, 255, 0.15);
-  background: rgba(22, 119, 255, 0.04);
+  box-shadow: none;
+  background: var(--surface-hover);
 }
 
 .partner-card-text {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.05rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   letter-spacing: 0.02em;
   transition: color 0.3s ease;
 }
 
 .partner-card:hover .partner-card-text {
-  color: #ffffff;
-  text-shadow: 0 0 12px rgba(22, 119, 255, 0.5);
+  color: var(--text);
+  text-shadow: none;
 }
 
 /* ==========================================================================
@@ -244,8 +218,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: rgba(14, 18, 26, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface);
+  border: 1px solid var(--border);
   padding: 0.4rem;
   border-radius: 12px;
   max-width: 580px;
@@ -258,7 +232,7 @@
   border-radius: 8px;
   border: none;
   background: transparent;
-  color: #94a3b8;
+  color: var(--text-muted);
   font-weight: 700;
   font-size: 0.92rem;
   cursor: pointer;
@@ -271,10 +245,10 @@
 }
 
 .track-mode-btn.active {
-  background: linear-gradient(135deg, rgba(22, 119, 255, 0.25), rgba(0, 140, 255, 0.3));
-  border: 1px solid #1677FF;
-  color: #ffffff;
-  box-shadow: 0 0 16px rgba(22, 119, 255, 0.3);
+  background: var(--silver);
+  border: 1px solid var(--silver);
+  color: var(--text-on-light);
+  box-shadow: none;
 }
 
 .category-filter-bar {
@@ -288,9 +262,9 @@
 .category-filter-btn {
   padding: 0.5rem 1.1rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-  color: #94a3b8;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -298,25 +272,25 @@
 }
 
 .category-filter-btn:hover {
-  color: #ffffff;
-  border-color: rgba(22, 119, 255, 0.4);
-  background: rgba(22, 119, 255, 0.08);
+  color: var(--text);
+  border-color: var(--silver);
+  background: var(--surface-hover);
 }
 
 .category-filter-btn.active {
-  background: #1677FF;
-  color: #ffffff;
+  background: var(--silver);
+  color: var(--text-on-light);
   font-weight: 700;
-  border-color: #1677FF;
-  box-shadow: 0 0 14px rgba(22, 119, 255, 0.4);
+  border-color: var(--silver);
+  box-shadow: none;
 }
 
 /* ==========================================================================
    Curriculum & Capstone Showcase Cards
    ========================================================================== */
 .showcase-card {
-  background: rgba(12, 16, 24, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 2rem;
   display: flex;
@@ -325,28 +299,17 @@
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: none;
 }
 
 .showcase-card:hover {
-  border-color: rgba(22, 119, 255, 0.45);
-  box-shadow: 0 12px 32px rgba(22, 119, 255, 0.15);
+  border-color: var(--silver);
+  box-shadow: none;
   transform: translateY(-4px);
 }
 
 .showcase-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(22, 119, 255, 0.6), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.showcase-card:hover::before {
-  opacity: 1;
+  display: none;
 }
 
 .badge-tag-neon {
@@ -356,32 +319,32 @@
   letter-spacing: 0.06em;
   padding: 0.25rem 0.65rem;
   border-radius: 6px;
-  background: rgba(22, 119, 255, 0.1);
-  border: 1px solid rgba(22, 119, 255, 0.3);
-  color: #008CFF;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--silver);
 }
 
 .tech-chip {
   font-size: 0.78rem;
   padding: 0.3rem 0.65rem;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #e2e8f0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
   font-family: monospace;
 }
 
 .capstone-spec-box {
-  background: rgba(22, 119, 255, 0.05);
-  border: 1px solid rgba(22, 119, 255, 0.2);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
   margin: 1.25rem 0;
 }
 
 .github-workflow-box {
-  background: rgba(22, 119, 255, 0.06);
-  border: 1px solid rgba(22, 119, 255, 0.2);
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.25rem;
@@ -390,7 +353,7 @@
 .expand-details-btn {
   background: none;
   border: none;
-  color: #008CFF;
+  color: var(--silver);
   font-weight: 600;
   font-size: 0.88rem;
   display: inline-flex;
@@ -398,12 +361,13 @@
   gap: 0.4rem;
   cursor: pointer;
   padding: 0;
-  transition: gap 0.2s ease;
+  transition: gap 0.2s ease, color 0.2s ease;
 }
 
 .expand-details-btn:hover {
   gap: 0.6rem;
-  text-shadow: 0 0 8px rgba(22, 119, 255, 0.5);
+  color: var(--silver-hover);
+  text-shadow: none;
 }
 
 /* ==========================================================================
@@ -418,17 +382,18 @@
 }
 
 .pipeline-card {
-  background: rgba(12, 16, 24, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.75rem 1.5rem;
   position: relative;
   transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 .pipeline-card:hover {
-  border-color: #1677FF;
-  box-shadow: 0 8px 24px rgba(22, 119, 255, 0.2);
+  border-color: var(--silver);
+  box-shadow: none;
   transform: translateY(-3px);
 }
 
@@ -439,9 +404,9 @@
   width: 42px;
   height: 42px;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(22, 119, 255, 0.2), rgba(0, 140, 255, 0.4));
-  border: 1px solid #1677FF;
-  color: #1677FF;
+  background: var(--silver);
+  border: 1px solid var(--silver);
+  color: var(--text-on-light);
   font-weight: 800;
   font-size: 1.1rem;
   margin-bottom: 1.25rem;
@@ -463,19 +428,20 @@
    Student Testimonials / Success Stories
    ========================================================================== */
 .testimonial-card {
-  background: rgba(14, 18, 26, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 .testimonial-card:hover {
-  border-color: rgba(22, 119, 255, 0.35);
-  box-shadow: 0 8px 24px rgba(22, 119, 255, 0.15);
+  border-color: var(--silver);
+  box-shadow: none;
   transform: translateY(-3px);
 }
 
@@ -485,15 +451,15 @@
   gap: 0.85rem;
   margin-top: 1.25rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border);
 }
 
 .author-avatar {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1677FF, #008CFF);
-  color: #ffffff;
+  background: var(--silver);
+  color: var(--text-on-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -506,8 +472,8 @@
    B2B College MoU Callout Box
    ========================================================================== */
 .mou-card-banner {
-  background: radial-gradient(circle at 10% 20%, rgba(22, 119, 255, 0.12) 0%, rgba(12, 16, 24, 0.95) 80%);
-  border: 1px solid rgba(22, 119, 255, 0.35);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2.5rem;
   display: flex;
@@ -515,11 +481,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  box-shadow: 0 10px 30px rgba(22, 119, 255, 0.15);
+  box-shadow: none;
 }
 
 /* ==========================================================================
-   Floating "For apply" Scroll Popup (Showing Downwards)
+   Floating "For apply" Scroll Popup
    ========================================================================== */
 .floating-apply-popup {
   position: fixed;
@@ -531,19 +497,19 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.4rem 0.5rem 0.4rem 0.6rem;
-  background: rgba(10, 15, 26, 0.94);
+  background: var(--surface);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(22, 119, 255, 0.45);
+  border: 1px solid var(--border);
   border-radius: 9999px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(22, 119, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
   animation: popupSlideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transition: all 0.25s ease;
 }
 
 .floating-apply-popup:hover {
-  border-color: #1677FF;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(22, 119, 255, 0.45);
+  border-color: var(--silver);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7);
 }
 
 .floating-apply-pill {
@@ -564,9 +530,10 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(22, 119, 255, 0.12);
-  border: 1px solid rgba(22, 119, 255, 0.35);
-  box-shadow: 0 0 10px rgba(22, 119, 255, 0.2);
+  background: var(--silver-subtle);
+  border: 1px solid var(--border);
+  box-shadow: none;
+  color: var(--silver);
 }
 
 .floating-apply-content {
@@ -576,16 +543,16 @@
 }
 
 .floating-apply-label {
-  font-family: var(--font-heading, sans-serif);
+  font-family: var(--font-heading);
   font-size: 0.96rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
   letter-spacing: 0.02em;
 }
 
 .floating-apply-sub {
   font-size: 0.72rem;
-  color: #008CFF;
+  color: var(--silver);
   font-weight: 500;
   letter-spacing: 0.03em;
 }
@@ -597,8 +564,9 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(22, 119, 255, 0.25) 0%, rgba(0, 140, 255, 0.25) 100%);
-  border: 1px solid rgba(22, 119, 255, 0.4);
+  background: var(--silver);
+  border: 1px solid var(--silver);
+  color: var(--text-on-light);
 }
 
 .floating-arrow-bounce {
@@ -621,18 +589,18 @@
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #94a3b8;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
   cursor: pointer;
   transition: all 0.2s ease;
   padding: 0;
 }
 
 .floating-apply-close-btn:hover {
-  background: rgba(255, 255, 255, 0.18);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
+  background: var(--surface-hover);
+  color: var(--text);
+  border-color: var(--silver);
 }
 
 @keyframes popupSlideUpFade {

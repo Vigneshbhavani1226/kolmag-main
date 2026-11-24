@@ -80,9 +80,9 @@ export function AboutSection() {
 
         {/* Core Values & Why Partner Overview */}
         <div className="grid-2">
-          <div className="feature-card" style={{ borderLeft: '3px solid #1677FF' }}>
+          <div className="feature-card" style={{ borderLeft: '3px solid var(--silver)' }}>
             <h3 className="feature-title">Core Company Values</h3>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.85rem', marginTop: '1.25rem', color: '#D1D5DB', fontSize: '0.92rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.85rem', marginTop: '1.25rem', color: 'var(--text-muted)', fontSize: '0.92rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" style={{ marginTop: '0.2rem' }} /> 
                 <div><strong>Security and Responsibility:</strong> Defensive engineering, data protection, and confidentiality integrated into every build from day one.</div>
@@ -102,12 +102,12 @@ export function AboutSection() {
             </ul>
           </div>
 
-          <div className="feature-card" style={{ borderLeft: '3px solid #008CFF' }}>
+          <div className="feature-card" style={{ borderLeft: '3px solid var(--silver)' }}>
             <h3 className="feature-title">Why Partner with KOLMAG?</h3>
             <p className="feature-desc" style={{ marginBottom: '1.25rem' }}>
               We offer a synchronized portfolio combining deep technical capabilities in software and security with practical business operations support and skilled engineering talent pipelines.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', fontSize: '0.86rem', color: '#94a3b8' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', fontSize: '0.86rem', color: 'var(--text-muted)' }}>
               <div style={{ background: 'rgba(255,255,255,0.03)', padding: '0.75rem', borderRadius: '6px' }}>
                 <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem' }}>Disciplined SDLC</strong> 
                 DevSecOps, automated testing, and clean architecture standards.
@@ -169,7 +169,7 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
 
         {/* Filter Bar: Tabs & Search */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ display: 'flex', gap: '0.5rem', background: '#090d16', padding: '0.35rem', borderRadius: '8px', border: '1px solid rgba(22, 119, 255, 0.25)' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', background: 'var(--surface)', padding: '0.35rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
             <button
               type="button"
               onClick={() => setActiveTab('all')}
@@ -181,8 +181,8 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
-                background: activeTab === 'all' ? '#1677FF' : 'transparent',
-                color: activeTab === 'all' ? '#ffffff' : '#94a3b8'
+                background: activeTab === 'all' ? 'var(--silver)' : 'transparent',
+                color: activeTab === 'all' ? 'var(--text-on-light)' : 'var(--text-muted)'
               }}
             >
               All Offerings ({allCapabilities.length + allIndustries.length})
@@ -198,8 +198,8 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
-                background: activeTab === 'capabilities' ? '#1677FF' : 'transparent',
-                color: activeTab === 'capabilities' ? '#ffffff' : '#94a3b8'
+                background: activeTab === 'capabilities' ? 'var(--silver)' : 'transparent',
+                color: activeTab === 'capabilities' ? 'var(--text-on-light)' : 'var(--text-muted)'
               }}
             >
               Capabilities ({allCapabilities.length})
@@ -215,8 +215,8 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
-                background: activeTab === 'industries' ? '#1677FF' : 'transparent',
-                color: activeTab === 'industries' ? '#ffffff' : '#94a3b8'
+                background: activeTab === 'industries' ? 'var(--silver)' : 'transparent',
+                color: activeTab === 'industries' ? 'var(--text-on-light)' : 'var(--text-muted)'
               }}
             >
               Industries ({allIndustries.length})
@@ -233,8 +233,8 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
               style={{
                 width: '100%',
                 padding: '0.55rem 1rem 0.55rem 2.25rem',
-                background: '#090d16',
-                border: '1px solid rgba(22, 119, 255, 0.25)',
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
                 borderRadius: '8px',
                 color: '#ffffff',
                 fontSize: '0.85rem',
@@ -283,11 +283,11 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
                             key={tIdx}
                             style={{
                               fontSize: '0.68rem',
-                              background: 'rgba(22, 119, 255, 0.12)',
-                              color: '#60a5fa',
+                              background: 'var(--silver-subtle)',
+                              color: 'var(--silver)',
                               padding: '0.15rem 0.5rem',
                               borderRadius: '4px',
-                              border: '1px solid rgba(22, 119, 255, 0.25)'
+                              border: '1px solid var(--border)'
                             }}
                           >
                             {tool}
@@ -296,11 +296,11 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
                       </div>
                     )}
                   </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.25rem', paddingTop: '0.85rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                    <span className="mega-footer-link" style={{ fontSize: '0.84rem', color: '#008CFF' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.25rem', paddingTop: '0.85rem', borderTop: '1px solid var(--border)' }}>
+                    <span className="mega-footer-link" style={{ fontSize: '0.84rem', color: 'var(--silver)' }}>
                       How We Fulfill This <ArrowRight className="w-3.5 h-3.5" />
                     </span>
-                    <span style={{ fontSize: '0.72rem', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       Tap for details
                     </span>
                   </div>
@@ -343,11 +343,11 @@ export function ServicesSection({ onOpenConsultation, onSelectService }) {
                     <h3 className="feature-title">{item.title}</h3>
                     <p className="feature-desc">{item.desc}</p>
                   </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.25rem', paddingTop: '0.85rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                    <span className="mega-footer-link" style={{ fontSize: '0.84rem', color: '#008CFF' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.25rem', paddingTop: '0.85rem', borderTop: '1px solid var(--border)' }}>
+                    <span className="mega-footer-link" style={{ fontSize: '0.84rem', color: 'var(--silver)' }}>
                       Industry Practice Details <ArrowRight className="w-3.5 h-3.5" />
                     </span>
-                    <span style={{ fontSize: '0.72rem', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       Tap for details
                     </span>
                   </div>
@@ -449,7 +449,7 @@ export function SolutionsSection({ onOpenConsultation }) {
             <div key={idx} className="solution-arch-card">
               <div className="sol-arch-header">
                 <span className="sol-tag">{sol.tag}</span>
-                <span style={{ fontSize: '0.8rem', color: '#64748b' }}>Solution 0{idx + 1}</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Solution 0{idx + 1}</span>
               </div>
 
               <h3 className="feature-title" style={{ fontSize: '1.35rem' }}>{sol.title}</h3>
@@ -463,7 +463,7 @@ export function SolutionsSection({ onOpenConsultation }) {
               </div>
 
               <div>
-                <span style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>
                   Associated Services:
                 </span>
                 <div className="sol-services-pills">
@@ -625,7 +625,7 @@ export function TrainingSection({ onOpenConsultation }) {
                     Core curriculum emphasizing hands-on problem solving, architectural patterns, and production coding habits.
                   </p>
                 </div>
-                <div style={{ fontSize: '0.78rem', color: '#008CFF', background: 'rgba(22, 119, 255, 0.08)', padding: '0.5rem 0.75rem', borderRadius: '6px' }}>
+                <div style={{ fontSize: '0.78rem', color: 'var(--silver)', background: 'var(--silver-subtle)', padding: '0.5rem 0.75rem', borderRadius: '6px' }}>
                   <strong>Key Technologies:</strong> {trk.tools}
                 </div>
               </div>
@@ -758,7 +758,7 @@ export function CareersSection({ onOpenConsultation }) {
               <div key={idx} className="feature-card" style={{ padding: '1.5rem' }}>
                 <div className="feature-icon-wrapper" style={{ marginBottom: '1rem' }}>{val.icon}</div>
                 <h4 style={{ color: '#fff', fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem' }}>{val.title}</h4>
-                <p style={{ color: '#94a3b8', fontSize: '0.85rem', lineHeight: '1.5' }}>{val.desc}</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: '1.5' }}>{val.desc}</p>
               </div>
             ))}
           </div>
@@ -808,24 +808,24 @@ export function CareersSection({ onOpenConsultation }) {
               <div className="feature-card" style={{ marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   <div style={{ display: 'flex', gap: '1rem' }}>
-                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(22, 119, 255, 0.15)', color: '#008CFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>1</div>
+                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--silver-subtle)', color: 'var(--silver)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>1</div>
                     <div>
                       <h4 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 600 }}>Profile & Resume Evaluation</h4>
-                      <p style={{ color: '#94a3b8', fontSize: '0.84rem' }}>Review of technical projects, GitHub/portfolio links, and domain alignment.</p>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.84rem' }}>Review of technical projects, GitHub/portfolio links, and domain alignment.</p>
                     </div>
                   </div>
                   <div style={{ display: 'flex', gap: '1rem' }}>
-                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(22, 119, 255, 0.15)', color: '#008CFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>2</div>
+                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--silver-subtle)', color: 'var(--silver)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>2</div>
                     <div>
                       <h4 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 600 }}>Technical & Practical Assessment</h4>
-                      <p style={{ color: '#94a3b8', fontSize: '0.84rem' }}>Live coding evaluation, architectural discussion, or role-specific exercise.</p>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.84rem' }}>Live coding evaluation, architectural discussion, or role-specific exercise.</p>
                     </div>
                   </div>
                   <div style={{ display: 'flex', gap: '1rem' }}>
-                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(22, 119, 255, 0.15)', color: '#008CFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>3</div>
+                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--silver-subtle)', color: 'var(--silver)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>3</div>
                     <div>
                       <h4 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 600 }}>Leadership Dialogue & Offer</h4>
-                      <p style={{ color: '#94a3b8', fontSize: '0.84rem' }}>Culture fit conversation, role expectations, and formal onboarding timeline.</p>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.84rem' }}>Culture fit conversation, role expectations, and formal onboarding timeline.</p>
                     </div>
                   </div>
                 </div>
@@ -837,15 +837,15 @@ export function CareersSection({ onOpenConsultation }) {
               <h4 style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem' }}>
                 Submit Your Resume (General Application)
               </h4>
-              <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1.25rem' }}>
                 Don't see an exact match? Submit your details to our talent pool for upcoming IT, cybersecurity, and operations roles.
               </p>
 
               {resumeSubmitted ? (
-                <div style={{ background: 'rgba(22, 119, 255, 0.1)', border: '1px solid #1677FF', borderRadius: '8px', padding: '1.25rem', textAlign: 'center', color: '#fff' }}>
+                <div style={{ background: 'var(--silver-subtle)', border: '1px solid var(--silver)', borderRadius: '8px', padding: '1.25rem', textAlign: 'center', color: '#fff' }}>
                   <CheckCircle2 className="w-8 h-8 text-blue-400" style={{ margin: '0 auto 0.5rem' }} />
                   <h4 style={{ fontSize: '1rem', fontWeight: 700 }}>Resume Profile Received</h4>
-                  <p style={{ fontSize: '0.84rem', color: '#D1D5DB', marginTop: '0.25rem' }}>
+                  <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
                     Thank you! Your profile has been registered in the KOLMAG Talent Acquisition registry.
                   </p>
                 </div>
@@ -857,7 +857,7 @@ export function CareersSection({ onOpenConsultation }) {
                     value={resumeData.name}
                     onChange={(e) => setResumeData({...resumeData, name: e.target.value})}
                     required 
-                    style={{ background: 'rgba(10, 14, 22, 0.8)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
+                    style={{ background: 'rgba(10, 14, 22, 0.8)', border: '1px solid var(--border)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
                   />
                   <input 
                     type="email" 
@@ -865,13 +865,13 @@ export function CareersSection({ onOpenConsultation }) {
                     value={resumeData.email}
                     onChange={(e) => setResumeData({...resumeData, email: e.target.value})}
                     required 
-                    style={{ background: 'rgba(10, 14, 22, 0.8)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
+                    style={{ background: 'rgba(10, 14, 22, 0.8)', border: '1px solid var(--border)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
                   />
                   <select 
                     value={resumeData.role}
                     onChange={(e) => setResumeData({...resumeData, role: e.target.value})}
                     required 
-                    style={{ background: '#050505', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
+                    style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
                   >
                     <option value="">Select Target Track...</option>
                     <option value="Software Engineering">Software Engineering & Development</option>
@@ -886,7 +886,7 @@ export function CareersSection({ onOpenConsultation }) {
                     value={resumeData.notes}
                     onChange={(e) => setResumeData({...resumeData, notes: e.target.value})}
                     required 
-                    style={{ background: 'rgba(0,24,56,0.7)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
+                    style={{ background: 'var(--bg)', border: '1px solid var(--border)', color: '#fff', padding: '0.65rem 0.85rem', borderRadius: '6px', fontSize: '0.88rem' }}
                   />
                   <button type="submit" className="btn-modal-primary" style={{ padding: '0.7rem' }}>
                     Submit Resume Application
@@ -935,39 +935,39 @@ export function ContactSection({ onOpenConsultation }) {
         {/* 6 Inquiry Pathway Cards */}
         <div id="contact-paths" className="grid-3" style={{ marginBottom: '3.5rem' }}>
           <div className="contact-route-card" onClick={() => onOpenConsultation && onOpenConsultation('IT & Digital Services')}>
-            <div style={{ color: '#008CFF', marginBottom: '0.5rem' }}><Code2 className="w-5 h-5" /></div>
+            <div style={{ color: 'var(--silver)', marginBottom: '0.5rem' }}><Code2 className="w-5 h-5" /></div>
             <h4 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.25rem' }}>IT Services Inquiry</h4>
-            <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Custom software, cloud architecture, cybersecurity audits & AI pipelines.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Custom software, cloud architecture, cybersecurity audits & AI pipelines.</p>
           </div>
 
           <div className="contact-route-card" onClick={() => onOpenConsultation && onOpenConsultation('Business & Non-IT Services')}>
-            <div style={{ color: '#008CFF', marginBottom: '0.5rem' }}><Briefcase className="w-5 h-5" /></div>
+            <div style={{ color: 'var(--silver)', marginBottom: '0.5rem' }}><Briefcase className="w-5 h-5" /></div>
             <h4 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.25rem' }}>Non-IT & Operations Inquiry</h4>
-            <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Recruitment, HR workflows, BPO support & business consulting.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Recruitment, HR workflows, BPO support & business consulting.</p>
           </div>
 
           <div className="contact-route-card" onClick={() => onOpenConsultation && onOpenConsultation('Training & Internships')}>
-            <div style={{ color: '#008CFF', marginBottom: '0.5rem' }}><GraduationCap className="w-5 h-5" /></div>
+            <div style={{ color: 'var(--silver)', marginBottom: '0.5rem' }}><GraduationCap className="w-5 h-5" /></div>
             <h4 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.25rem' }}>Training & Internships Inquiry</h4>
-            <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Student internships, technical courses, and university MoUs.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Student internships, technical courses, and university MoUs.</p>
           </div>
 
           <div className="contact-route-card" onClick={() => onOpenConsultation && onOpenConsultation('Recruitment & Staffing')}>
-            <div style={{ color: '#008CFF', marginBottom: '0.5rem' }}><Users className="w-5 h-5" /></div>
+            <div style={{ color: 'var(--silver)', marginBottom: '0.5rem' }}><Users className="w-5 h-5" /></div>
             <h4 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.25rem' }}>Corporate Recruitment Inquiry</h4>
-            <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Hire vetted engineers and lateral technical staffing for enterprise teams.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Hire vetted engineers and lateral technical staffing for enterprise teams.</p>
           </div>
 
           <div className="contact-route-card" onClick={() => onOpenConsultation && onOpenConsultation('Business Partnership')}>
-            <div style={{ color: '#008CFF', marginBottom: '0.5rem' }}><Building2 className="w-5 h-5" /></div>
+            <div style={{ color: 'var(--silver)', marginBottom: '0.5rem' }}><Building2 className="w-5 h-5" /></div>
             <h4 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.25rem' }}>Enterprise Partnership</h4>
-            <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Vendor alliances, joint technology ventures, and ecosystem programs.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Vendor alliances, joint technology ventures, and ecosystem programs.</p>
           </div>
 
-          <div className="contact-route-card" style={{ background: 'linear-gradient(135deg, rgba(22,119,255,0.25), rgba(0,140,255,0.08))', borderColor: '#1677FF' }} onClick={() => onOpenConsultation && onOpenConsultation('General')}>
-            <div style={{ color: '#008CFF', marginBottom: '0.5rem' }}><MessageSquare className="w-5 h-5" /></div>
+          <div className="contact-route-card" style={{ background: 'linear-gradient(135deg, var(--border), rgba(0,140,255,0.08))', borderColor: 'var(--silver)' }} onClick={() => onOpenConsultation && onOpenConsultation('General')}>
+            <div style={{ color: 'var(--silver)', marginBottom: '0.5rem' }}><MessageSquare className="w-5 h-5" /></div>
             <h4 style={{ color: '#fff', fontWeight: 700, fontSize: '1rem', marginBottom: '0.25rem' }}>General Inquiries</h4>
-            <p style={{ color: '#D1D5DB', fontSize: '0.82rem' }}>General corporate information, media questions, or administrative requests.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>General corporate information, media questions, or administrative requests.</p>
           </div>
         </div>
 
@@ -979,11 +979,11 @@ export function ContactSection({ onOpenConsultation }) {
               Reach our corporate offices or connect directly with our engineering advisory team during standard business hours.
             </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.35rem', color: '#cbd5e1', fontSize: '0.92rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.35rem', color: 'var(--text-muted)', fontSize: '0.92rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                 <Mail className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Corporate Email</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Corporate Email</div>
                   <a href="mailto:contact@kolmagtech.com" style={{ color: '#fff', textDecoration: 'none', fontWeight: 500 }}>contact@kolmagtech.com</a>
                 </div>
               </div>
@@ -991,7 +991,7 @@ export function ContactSection({ onOpenConsultation }) {
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                 <Phone className="w-5 h-5 text-blue-500 flex-shrink-0" />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Phone Advisory</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Phone Advisory</div>
                   <a href="tel:+916309649554" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600 }}>+91 6309649554</a>
                 </div>
               </div>
@@ -999,11 +999,11 @@ export function ContactSection({ onOpenConsultation }) {
               <div id="contact-office" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
                 <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0" style={{ marginTop: '0.2rem' }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.2rem' }}>Registered Office</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.2rem' }}>Registered Office</div>
                   <div style={{ color: '#ffffff', fontWeight: 600, fontSize: '0.92rem', marginBottom: '0.25rem' }}>
                     KOLMAG Cyber Technologies Pvt Ltd
                   </div>
-                  <div style={{ color: '#cbd5e1', fontSize: '0.88rem', lineHeight: '1.55' }}>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.55' }}>
                     HNO 9/HIG-A & 10/HIG APHB COLONY, GACHIBOWLI, K.V. RANGAREDDY, SERI LINGAMPALLY, TELANGANA, INDIA, 500032
                   </div>
                 </div>
@@ -1015,17 +1015,17 @@ export function ContactSection({ onOpenConsultation }) {
             <h3 className="feature-title">Send a Direct Message</h3>
 
             {formSent ? (
-              <div style={{ background: 'rgba(22, 119, 255, 0.1)', border: '1px solid #1677FF', borderRadius: '8px', padding: '1.5rem', textAlign: 'center', color: '#fff', marginTop: '1rem' }}>
+              <div style={{ background: 'var(--silver-subtle)', border: '1px solid var(--silver)', borderRadius: '8px', padding: '1.5rem', textAlign: 'center', color: '#fff', marginTop: '1rem' }}>
                 <CheckCircle2 className="w-8 h-8 text-blue-400" style={{ margin: '0 auto 0.5rem' }} />
                 <h4 style={{ fontSize: '1.05rem', fontWeight: 700 }}>Inquiry Received Successfully</h4>
-                <p style={{ fontSize: '0.85rem', color: '#D1D5DB', marginTop: '0.35rem' }}>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.35rem' }}>
                   Thank you! We have routed your request to the <strong>{contactData.inquiryCategory}</strong> team. We'll be in touch within 24 business hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleContactSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', marginTop: '1rem' }}>
                 <div>
-                  <label style={{ fontSize: '0.8rem', color: '#D1D5DB', fontWeight: 600 }}>Inquiry Pathway *</label>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>Inquiry Pathway *</label>
                   <select 
                     value={contactData.inquiryCategory}
                     onChange={(e) => setContactData({...contactData, inquiryCategory: e.target.value})}
@@ -1043,46 +1043,46 @@ export function ContactSection({ onOpenConsultation }) {
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                   <div>
-                    <label style={{ fontSize: '0.8rem', color: '#D1D5DB', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Full Name *</label>
+                    <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Full Name *</label>
                     <input 
                       type="text" 
                       value={contactData.name}
                       onChange={(e) => setContactData({...contactData, name: e.target.value})}
                       required 
-                      style={{ width: '100%', background: 'rgba(0,24,56,0.7)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
+                      style={{ width: '100%', background: 'var(--bg)', border: '1px solid var(--border)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: '0.8rem', color: '#D1D5DB', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Work Email *</label>
+                    <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Work Email *</label>
                     <input 
                       type="email" 
                       value={contactData.email}
                       onChange={(e) => setContactData({...contactData, email: e.target.value})}
                       required 
-                      style={{ width: '100%', background: 'rgba(0,24,56,0.7)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
+                      style={{ width: '100%', background: 'var(--bg)', border: '1px solid var(--border)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '0.8rem', color: '#D1D5DB', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Phone Number *</label>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Phone Number *</label>
                   <input 
                     type="tel" 
                     value={contactData.phone}
                     onChange={(e) => setContactData({...contactData, phone: e.target.value})}
                     required 
-                    style={{ width: '100%', background: 'rgba(0,24,56,0.7)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
+                    style={{ width: '100%', background: 'var(--bg)', border: '1px solid var(--border)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '0.8rem', color: '#D1D5DB', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Brief Description of Requirements *</label>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>Brief Description of Requirements *</label>
                   <textarea 
                     rows="3" 
                     value={contactData.message}
                     onChange={(e) => setContactData({...contactData, message: e.target.value})}
                     required 
-                    style={{ width: '100%', background: 'rgba(0,24,56,0.7)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
+                    style={{ width: '100%', background: 'var(--bg)', border: '1px solid var(--border)', color: '#fff', padding: '0.75rem 0.85rem', borderRadius: '6px', fontSize: '0.9rem' }}
                   />
                 </div>
 
@@ -1111,7 +1111,7 @@ export function Footer({ onOpenConsultation }) {
             <h3 style={{ color: '#ffffff', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.35rem' }}>
               Have a Technology Challenge or Training Requirement?
             </h3>
-            <p style={{ color: '#cbd5e1', fontSize: '0.92rem', margin: 0, maxWidth: '680px', lineHeight: '1.6' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', margin: 0, maxWidth: '680px', lineHeight: '1.6' }}>
               Our engineering leads and academy coordinators are available to collaborate on custom enterprise software, cybersecurity audits, or student internship cohorts.
             </p>
           </div>
@@ -1133,13 +1133,13 @@ export function Footer({ onOpenConsultation }) {
                 src="/assets/kolmag-logo-white.png" 
                 alt="KOLMAG Cyber Technologies White Logo" 
                 className="footer-brand-logo"
-                style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(22, 119, 255, 0.35))' }}
+                style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 10px var(--border))' }}
               />
             </Link>
-            <p style={{ color: '#D1D5DB', lineHeight: '1.65', fontSize: '0.88rem', maxWidth: '320px', marginBottom: '1.25rem' }}>
+            <p style={{ color: 'var(--text-muted)', lineHeight: '1.65', fontSize: '0.88rem', maxWidth: '320px', marginBottom: '1.25rem' }}>
               <strong>KOLMAG CYBER TECHNOLOGIES PRIVATE LIMITED</strong>. Delivering secure software engineering, modern cloud architectures, defensive cybersecurity, and practical talent development.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#008CFF', fontSize: '0.82rem', fontWeight: 600 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--silver)', fontSize: '0.82rem', fontWeight: 600 }}>
               <span className="status-dot"></span> Active Technology & Talent Ecosystem
             </div>
           </div>
@@ -1182,20 +1182,20 @@ export function Footer({ onOpenConsultation }) {
               <li><Link to="/terms">Terms of Use</Link></li>
             </ul>
 
-            <div style={{ fontSize: '0.84rem', color: '#94a3b8', lineHeight: '1.6' }}>
+            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
               <div style={{ color: '#fff', fontWeight: 600, marginBottom: '0.2rem' }}>Corporate Office</div>
-              <div style={{ color: '#cbd5e1', lineHeight: '1.5' }}>
+              <div style={{ color: 'var(--text-muted)', lineHeight: '1.5' }}>
                 HNO 9/HIG-A & 10/HIG APHB COLONY, GACHIBOWLI, K.V. RANGAREDDY, SERI LINGAMPALLY, TELANGANA, INDIA, 500032
               </div>
               <div style={{ marginTop: '0.5rem' }}>
-                <a href="mailto:contact@kolmagtech.com" style={{ color: '#008CFF', textDecoration: 'none' }}>
+                <a href="mailto:contact@kolmagtech.com" style={{ color: 'var(--silver)', textDecoration: 'none' }}>
                   contact@kolmagtech.com
                 </a>
               </div>
               <div style={{ marginTop: '0.35rem' }}>
                 <a 
                   href="tel:+916309649554" 
-                  style={{ color: '#008CFF', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+                  style={{ color: 'var(--silver)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
                 >
                   <Phone className="w-3.5 h-3.5" /> +91 6309649554
                 </a>
@@ -1205,13 +1205,13 @@ export function Footer({ onOpenConsultation }) {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', paddingTop: '1.5rem', marginTop: '2.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', fontSize: '0.84rem', color: '#94a3b8' }}>
+        <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', paddingTop: '1.5rem', marginTop: '2.5rem', borderTop: '1px solid var(--border)', fontSize: '0.84rem', color: 'var(--text-muted)' }}>
           <div>© {CURRENT_YEAR} KOLMAG CYBER TECHNOLOGIES PRIVATE LIMITED. All rights reserved.</div>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <Link to="/about" style={{ color: '#94a3b8', textDecoration: 'none' }}>About Us</Link>
-            <Link to="/privacy" style={{ color: '#94a3b8', textDecoration: 'none' }}>Privacy Policy</Link>
-            <Link to="/terms" style={{ color: '#94a3b8', textDecoration: 'none' }}>Terms of Use</Link>
-            <Link to="/contact" style={{ color: '#94a3b8', textDecoration: 'none' }}>Contact</Link>
+            <Link to="/about" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>About Us</Link>
+            <Link to="/privacy" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link to="/terms" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Terms of Use</Link>
+            <Link to="/contact" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Contact</Link>
           </div>
         </div>
       </div>

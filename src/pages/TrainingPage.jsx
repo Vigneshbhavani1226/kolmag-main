@@ -337,10 +337,10 @@ Best regards,
           <h1 className="page-banner-title" style={{ fontSize: 'clamp(2.3rem, 5vw, 3.6rem)', maxWidth: '900px', margin: '0 auto 1.25rem' }}>
             Practical Skills. Hands-On Projects.{' '}
             <span style={{ 
-              background: 'linear-gradient(135deg, #ffffff 0%, #008CFF 50%, #1677FF 100%)', 
+              background: 'var(--silver-gradient-heading)', 
               WebkitBackgroundClip: 'text', 
               WebkitTextFillColor: 'transparent',
-              textShadow: '0 0 25px rgba(22, 119, 255, 0.35)'
+              textShadow: "none"
             }}>
               Real Engineering.
             </span>
@@ -352,7 +352,7 @@ Best regards,
         </div>
 
         {/* Infinite Stats Marquee Ticker (Left to Right) */}
-        <div style={{ marginTop: '3.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', background: 'rgba(5, 5, 5, 0.5)', backdropFilter: 'blur(8px)' }}>
+        <div style={{ marginTop: '3.5rem', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', background: 'var(--surface)', backdropFilter: 'blur(8px)' }}>
           <div className="marquee-wrapper">
             <div className="marquee-track-ltr">
               {[...tickerStats, ...tickerStats].map((item, idx) => (
@@ -370,10 +370,10 @@ Best regards,
       {/* ===================================================================
           2. ALUMNI SPOTLIGHT & HIRING PARTNERS (Infinite Marquee)
           =================================================================== */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header" style={{ marginBottom: '2.5rem' }}>
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               🏢 OUR GRADUATES WORK AT TOP TECH COMPANIES
             </span>
             <h2 className="section-title">Preferred by 20+ Global Tech Leaders & Enterprises</h2>
@@ -436,10 +436,10 @@ Best regards,
       {/* ===================================================================
           3. TRACK SELECTOR (Interactive Tabs & Category Filters)
           =================================================================== */}
-      <section id="tracks" className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section id="tracks" className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               Specialization Tracks
             </span>
             <h2 className="section-title">Industry-Aligned Engineering Programs</h2>
@@ -522,7 +522,7 @@ Best regards,
                   <div>
                     {/* Top Header */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                      <div className="feature-icon-wrapper" style={{ margin: 0, background: 'rgba(22, 119, 255, 0.1)', color: '#008CFF', border: '1px solid rgba(22, 119, 255, 0.25)' }}>
+                      <div className="feature-icon-wrapper" style={{ margin: 0, background: 'var(--silver-subtle)', color: 'var(--silver)', border: '1px solid var(--border)' }}>
                         {trk.icon}
                       </div>
                       <span className="badge-tag-neon">{trk.badge}</span>
@@ -532,14 +532,14 @@ Best regards,
                       {trk.title}
                     </h3>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#008CFF', fontSize: '0.84rem', fontWeight: 600, marginBottom: '1.25rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: 'var(--silver)', fontSize: '0.84rem', fontWeight: 600, marginBottom: '1.25rem' }}>
                       <Clock className="w-3.5 h-3.5" />
                       <span>{trk.duration}</span>
                     </div>
 
                     {/* Stack Badges */}
                     <div style={{ marginBottom: '1.25rem' }}>
-                      <span style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 700, display: 'block', marginBottom: '0.5rem' }}>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 700, display: 'block', marginBottom: '0.5rem' }}>
                         Stack & Core Technologies:
                       </span>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
@@ -550,25 +550,25 @@ Best regards,
                     </div>
 
                     {/* Prerequisite Tags */}
-                    <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', padding: '0.85rem 1rem', borderRadius: '8px', marginBottom: '1.25rem' }}>
-                      <span style={{ color: '#94a3b8', fontSize: '0.76rem', textTransform: 'uppercase', fontWeight: 700, display: 'block', marginBottom: '0.2rem' }}>
+                    <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border)', padding: '0.85rem 1rem', borderRadius: '8px', marginBottom: '1.25rem' }}>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.76rem', textTransform: 'uppercase', fontWeight: 700, display: 'block', marginBottom: '0.2rem' }}>
                         Prerequisites:
                       </span>
-                      <span style={{ color: '#D1D5DB', fontSize: '0.86rem', lineHeight: '1.5' }}>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.86rem', lineHeight: '1.5' }}>
                         {trk.prereq}
                       </span>
                     </div>
 
                     {/* Capstone Project Spec Box */}
                     <div className="capstone-spec-box" style={{ margin: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: '#008CFF', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', color: 'var(--silver)', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.35rem' }}>
                         <Terminal className="w-4 h-4" />
                         <span>Capstone Project Spec:</span>
                       </div>
                       <strong style={{ color: '#ffffff', display: 'block', fontSize: '0.92rem', marginBottom: '0.3rem' }}>
                         {trk.projectTitle}
                       </strong>
-                      <p style={{ color: '#D1D5DB', fontSize: '0.85rem', lineHeight: '1.55', margin: 0 }}>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: '1.55', margin: 0 }}>
                         {trk.projectDesc}
                       </p>
                     </div>
@@ -583,10 +583,10 @@ Best regards,
       {/* ===================================================================
           5. INTERNSHIP IMMERSION FRAMEWORK (4-Step Process Pipeline)
           =================================================================== */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               Execution Lifecycle
             </span>
             <h2 className="section-title">Internship Immersion Framework</h2>
@@ -600,7 +600,7 @@ Best regards,
               <div key={idx} className="pipeline-card">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                   <div className="pipeline-step-badge">{step.step}</div>
-                  <span style={{ fontSize: '0.72rem', color: '#008CFF', background: 'rgba(22, 119, 255, 0.08)', padding: '0.2rem 0.55rem', borderRadius: '4px', fontWeight: 700 }}>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--silver)', background: 'var(--silver-subtle)', padding: '0.2rem 0.55rem', borderRadius: '4px', fontWeight: 700 }}>
                     {step.timeline}
                   </span>
                 </div>
@@ -609,7 +609,7 @@ Best regards,
                   {step.title}
                 </h3>
 
-                <p style={{ color: '#D1D5DB', fontSize: '0.88rem', lineHeight: '1.6', margin: 0 }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6', margin: 0 }}>
                   {step.desc}
                 </p>
               </div>
@@ -618,27 +618,27 @@ Best regards,
 
           {/* Core Immersion Guarantees */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', marginTop: '2.5rem' }}>
-            <div style={{ background: 'rgba(12, 16, 24, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '10px', padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+            <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '10px', padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
               <GitBranch className="w-6 h-6 text-blue-500 flex-shrink-0" />
               <div>
                 <strong style={{ color: '#fff', display: 'block', fontSize: '0.95rem' }}>Simulated Sprint Standups</strong>
-                <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Weekly retrospectives and sprint review cadences</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Weekly retrospectives and sprint review cadences</span>
               </div>
             </div>
 
-            <div style={{ background: 'rgba(12, 16, 24, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '10px', padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+            <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '10px', padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
               <Terminal className="w-6 h-6 text-blue-500 flex-shrink-0" />
               <div>
                 <strong style={{ color: '#fff', display: 'block', fontSize: '0.95rem' }}>Line-by-Line Code Reviews</strong>
-                <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Senior engineering guidance on all pull requests</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Senior engineering guidance on all pull requests</span>
               </div>
             </div>
 
-            <div style={{ background: 'rgba(12, 16, 24, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '10px', padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+            <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '10px', padding: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
               <Award className="w-6 h-6 text-blue-500 flex-shrink-0" />
               <div>
                 <strong style={{ color: '#fff', display: 'block', fontSize: '0.95rem' }}>Verified Capstone Credentials</strong>
-                <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Authentic project completion certificate & repo proof</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>Authentic project completion certificate & repo proof</span>
               </div>
             </div>
           </div>
@@ -651,14 +651,14 @@ Best regards,
       {/* ===================================================================
           6. APPLY FOR TRAINING OR INTERNSHIP
           =================================================================== */}
-      <section id="apply" className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)', textAlign: 'center' }}>
+      <section id="apply" className="section-padding" style={{ borderBottom: '1px solid var(--border)', textAlign: 'center' }}>
         <div id="apply-form"></div>
         <div className="container" style={{ maxWidth: '650px', margin: '0 auto' }}>
           <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '1rem' }}>
             Apply for Training or Internship
           </h2>
-          <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
-            Ready to take the next step? Submit your application directly to <span style={{ color: '#008CFF', fontWeight: 600 }}>Contact@kolmagtech.com</span>. Click below to launch Google Mail with our application template and attach your resume.
+          <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+            Ready to take the next step? Submit your application directly to <span style={{ color: 'var(--silver)', fontWeight: 600 }}>Contact@kolmagtech.com</span>. Click below to launch Google Mail with our application template and attach your resume.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -679,10 +679,10 @@ Best regards,
       {/* ===================================================================
           8. FREQUENTLY ASKED QUESTIONS (FAQ Accordion)
           =================================================================== */}
-      <section id="faq" className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section id="faq" className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge" style={{ borderColor: 'rgba(22, 119, 255, 0.35)', color: '#008CFF' }}>
+            <span className="section-badge" style={{ borderColor: 'var(--border)', color: 'var(--silver)' }}>
               Clear Answers
             </span>
             <h2 className="section-title">Frequently Asked Questions</h2>
@@ -698,7 +698,7 @@ Best regards,
                 <div 
                   key={idx} 
                   className="faq-accordion-item"
-                  style={{ background: 'rgba(12, 16, 24, 0.85)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '10px', overflow: 'hidden', transition: 'all 0.25s ease' }}
+                  style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '10px', overflow: 'hidden', transition: 'all 0.25s ease' }}
                 >
                   <button 
                     onClick={() => setActiveFaq(isOpen ? null : idx)}
@@ -709,7 +709,7 @@ Best regards,
                   </button>
 
                   {isOpen && (
-                    <div style={{ padding: '0 1.5rem 1.25rem', color: '#D1D5DB', fontSize: '0.92rem', lineHeight: '1.65', borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '0.85rem' }}>
+                    <div style={{ padding: '0 1.5rem 1.25rem', color: 'var(--text-muted)', fontSize: '0.92rem', lineHeight: '1.65', borderTop: '1px solid var(--border)', paddingTop: '0.85rem' }}>
                       {faq.a}
                     </div>
                   )}

@@ -120,7 +120,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 1. Company Overview */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: '3.5rem' }}>
             <div>
@@ -128,10 +128,10 @@ export default function AboutPage({ onOpenConsultation }) {
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.25rem' }}>
                 Dedicated to Reliable Engineering & Real-World Skills
               </h2>
-              <p style={{ color: '#D1D5DB', fontSize: '1rem', lineHeight: '1.7', marginBottom: '1.25rem' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.7', marginBottom: '1.25rem' }}>
                 <strong>KOLMAG CYBER TECHNOLOGIES PRIVATE LIMITED</strong> is a technology services and talent development organization based in Hyderabad, India. We help businesses build, secure, and modernize their digital infrastructure through custom software development, cloud operations, defensive cybersecurity, and AI solutions.
               </p>
-              <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '1.5rem' }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '1.5rem' }}>
                 At the same time, we recognize the critical gap between university academic curricula and industry expectations. Through structured training laboratories and student internships, we provide aspiring engineers with practical coding experience, Git workflows, and mentorship from practicing professionals.
               </p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -144,7 +144,7 @@ export default function AboutPage({ onOpenConsultation }) {
               </div>
             </div>
 
-            <div className="feature-card" style={{ padding: '2rem', border: '1px solid rgba(22, 119, 255, 0.35)', background: 'rgba(12, 16, 24, 0.9)' }}>
+            <div className="feature-card" style={{ padding: '2rem', border: '1px solid var(--border)', background: 'var(--surface)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                 <img 
                   src="/assets/kolmag-logo-white.png" 
@@ -155,26 +155,26 @@ export default function AboutPage({ onOpenConsultation }) {
                   <h3 style={{ color: '#ffffff', fontSize: '1.15rem', fontWeight: 700, margin: 0 }}>
                     KOLMAG CYBER TECHNOLOGIES
                   </h3>
-                  <span style={{ fontSize: '0.8rem', color: '#008CFF' }}>Private Limited • Incorporated Entity</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--silver)' }}>Private Limited • Incorporated Entity</span>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.25rem', fontSize: '0.9rem', color: '#D1D5DB' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1.25rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ color: '#94a3b8' }}>Core Focus:</span>
+                  <span style={{ color: 'var(--text-muted)' }}>Core Focus:</span>
                   <strong style={{ color: '#fff' }}>Software, Cyber & Training</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ color: '#94a3b8' }}>Delivery Model:</span>
+                  <span style={{ color: 'var(--text-muted)' }}>Delivery Model:</span>
                   <strong style={{ color: '#fff' }}>Dual Tech & Talent Ecosystem</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ color: '#94a3b8' }}>Corporate Office:</span>
+                  <span style={{ color: 'var(--text-muted)' }}>Corporate Office:</span>
                   <strong style={{ color: '#fff' }}>Hyderabad, India</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ color: '#94a3b8' }}>Support Channels:</span>
-                  <strong style={{ color: '#008CFF' }}>Email & Direct Phone</strong>
+                  <span style={{ color: 'var(--text-muted)' }}>Support Channels:</span>
+                  <strong style={{ color: 'var(--silver)' }}>Email & Direct Phone</strong>
                 </div>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 2. Mission, Vision & Approach */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Purpose & Direction</span>
@@ -202,7 +202,7 @@ export default function AboutPage({ onOpenConsultation }) {
                   To deliver secure, reliable, and scalable technology solutions for modern organizations while providing aspiring technical professionals with hands-on, project-driven competence that bridges the academic gap.
                 </p>
               </div>
-              <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.08)', fontSize: '0.8rem', color: '#008CFF', fontWeight: 600 }}>
+              <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border)', fontSize: '0.8rem', color: 'var(--silver)', fontWeight: 600 }}>
                 Dependable Delivery & Practical Learning
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function AboutPage({ onOpenConsultation }) {
                   To be a recognized technology and talent development partner renowned for disciplined engineering standards, transparent business practices, and an unwavering commitment to genuine capability building.
                 </p>
               </div>
-              <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.08)', fontSize: '0.8rem', color: '#008CFF', fontWeight: 600 }}>
+              <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border)', fontSize: '0.8rem', color: 'var(--silver)', fontWeight: 600 }}>
                 Quality Standards & Ethical Engagement
               </div>
             </div>
@@ -228,7 +228,7 @@ export default function AboutPage({ onOpenConsultation }) {
                   A disciplined, lifecycle-based methodology connecting requirements discovery, secure architecture design, iterative sprint development, rigorous test validation, and responsive ongoing support.
                 </p>
               </div>
-              <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.08)', fontSize: '0.8rem', color: '#008CFF', fontWeight: 600 }}>
+              <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border)', fontSize: '0.8rem', color: 'var(--silver)', fontWeight: 600 }}>
                 End-to-End Lifecycle Discipline
               </div>
             </div>
@@ -236,8 +236,8 @@ export default function AboutPage({ onOpenConsultation }) {
         </div>
       </section>
 
-      {/* 3. Core Values */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      {/* 3. Core Values (Alternating Cloud-White Section - Rule 6) */}
+      <section className="section-padding section-light">
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Guiding Standards</span>
@@ -266,7 +266,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 4. Technology Capabilities */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Verified Practice Areas</span>
@@ -284,7 +284,7 @@ export default function AboutPage({ onOpenConsultation }) {
                   <h3 className="feature-title" style={{ fontSize: '1.15rem', marginBottom: '0.5rem' }}>{cap.title}</h3>
                   <p className="feature-desc">{cap.desc}</p>
                 </div>
-                <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                <div style={{ marginTop: '1.25rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border)' }}>
                   <Link to="/services" className="card-action-cta" style={{ textDecoration: 'none' }}>
                     <span>Learn more</span> <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
@@ -296,7 +296,7 @@ export default function AboutPage({ onOpenConsultation }) {
       </section>
 
       {/* 5. Commitment to Practical Learning & Professional Development */}
-      <section className="section-padding" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <section className="section-padding" style={{ borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Real-World Competence</span>
@@ -316,12 +316,12 @@ export default function AboutPage({ onOpenConsultation }) {
             ))}
           </div>
 
-          <div className="feature-card" style={{ background: 'linear-gradient(135deg, rgba(22, 119, 255, 0.15), rgba(10, 14, 22, 0.9))', border: '1px solid rgba(22, 119, 255, 0.35)', padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
+          <div className="feature-card" style={{ background: 'var(--surface)', border: '1px solid var(--border)', padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
             <div>
               <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.35rem' }}>
                 Interested in Our Practical Training or Student Internships?
               </h3>
-              <p style={{ color: '#D1D5DB', fontSize: '0.92rem', maxWidth: '650px', margin: 0 }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', maxWidth: '650px', margin: 0 }}>
                 Explore curriculum tracks, project expectations, eligibility criteria, and connect directly with our academy leads.
               </p>
             </div>
@@ -351,7 +351,7 @@ export default function AboutPage({ onOpenConsultation }) {
               <p className="feature-desc" style={{ marginBottom: '1rem' }}>
                 We prioritize secure coding practices, automated regression testing, and modular architectures to eliminate technical debt early.
               </p>
-              <div style={{ fontSize: '0.85rem', color: '#008CFF', background: 'rgba(22, 119, 255, 0.08)', border: '1px solid rgba(22, 119, 255, 0.2)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
+              <div style={{ fontSize: '0.85rem', color: 'var(--silver)', background: 'var(--silver-subtle)', border: '1px solid var(--border)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
                 ✓ Clean version control, peer reviews & automated linting
               </div>
             </div>
@@ -363,7 +363,7 @@ export default function AboutPage({ onOpenConsultation }) {
               <p className="feature-desc" style={{ marginBottom: '1rem' }}>
                 Our synchronized structure allows businesses to access both senior engineering expertise and dedicated junior engineering pipelines.
               </p>
-              <div style={{ fontSize: '0.85rem', color: '#008CFF', background: 'rgba(22, 119, 255, 0.08)', border: '1px solid rgba(22, 119, 255, 0.2)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
+              <div style={{ fontSize: '0.85rem', color: 'var(--silver)', background: 'var(--silver-subtle)', border: '1px solid var(--border)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
                 ✓ Flexible engagement models from project builds to staffing support
               </div>
             </div>
@@ -375,7 +375,7 @@ export default function AboutPage({ onOpenConsultation }) {
               <p className="feature-desc" style={{ marginBottom: '1rem' }}>
                 Clients work directly with technical project leads with regular sprint demonstrations, transparent progress tracking, and straightforward pricing.
               </p>
-              <div style={{ fontSize: '0.85rem', color: '#008CFF', background: 'rgba(22, 119, 255, 0.08)', border: '1px solid rgba(22, 119, 255, 0.2)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
+              <div style={{ fontSize: '0.85rem', color: 'var(--silver)', background: 'var(--silver-subtle)', border: '1px solid var(--border)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
                 ✓ Direct technical communication with no bureaucratic layers
               </div>
             </div>
@@ -387,7 +387,7 @@ export default function AboutPage({ onOpenConsultation }) {
               <p className="feature-desc" style={{ marginBottom: '1rem' }}>
                 We actively integrate contemporary frameworks—including React, modern cloud-native tools, and verified AI pipelines—keeping your applications ahead of the curve.
               </p>
-              <div style={{ fontSize: '0.85rem', color: '#008CFF', background: 'rgba(22, 119, 255, 0.08)', border: '1px solid rgba(22, 119, 255, 0.2)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
+              <div style={{ fontSize: '0.85rem', color: 'var(--silver)', background: 'var(--silver-subtle)', border: '1px solid var(--border)', padding: '0.65rem 0.85rem', borderRadius: '6px' }}>
                 ✓ Future-ready tech stacks without unnecessary complexity
               </div>
             </div>

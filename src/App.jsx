@@ -66,9 +66,9 @@ export default function App() {
       {/* 0. Full-Viewport Liquid Metal Animated Background Layer */}
       <div className="site-liquid-metal-backdrop" aria-hidden="true">
         <LiquidMetalShader
-          baseColor="#0A0A0A"
-          metalColor="#CCD0E2"
-          highlightColor="#FFFFFF"
+          baseColor="#0E1013"
+          metalColor="#C5CAD3"
+          highlightColor="#F4F6F8"
           distortion={0.6}
           interactive={true}
           pixelRatio={1.4}

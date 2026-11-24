@@ -357,7 +357,7 @@ export default function Navbar({ _onReplayIntro, onOpenConsultation, onSelectSer
                 </button>
                 {mobileServicesOpen && (
                   <div className="mobile-sub-menu">
-                    <div style={{ color: '#008CFF', fontSize: '0.8rem', fontWeight: 800, padding: '0.5rem 0.65rem 0.25rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    <div style={{ color: 'var(--silver)', fontSize: '0.8rem', fontWeight: 800, padding: '0.5rem 0.65rem 0.25rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       Capabilities
                     </div>
                     {[...capabilitiesCol1, ...capabilitiesCol2].map((item, idx) => (
@@ -372,7 +372,7 @@ export default function Navbar({ _onReplayIntro, onOpenConsultation, onSelectSer
                       </button>
                     ))}
 
-                    <div style={{ color: '#008CFF', fontSize: '0.8rem', fontWeight: 800, padding: '0.85rem 0.65rem 0.25rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    <div style={{ color: 'var(--silver)', fontSize: '0.8rem', fontWeight: 800, padding: '0.85rem 0.65rem 0.25rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       Industries
                     </div>
                     {[...industriesCol1, ...industriesCol2].map((item, idx) => (
@@ -390,7 +390,7 @@ export default function Navbar({ _onReplayIntro, onOpenConsultation, onSelectSer
                     <Link 
                       to="/services" 
                       className="mobile-sub-link" 
-                      style={{ color: '#ffffff', fontWeight: 700, marginTop: '0.65rem', borderTop: '1px solid rgba(22, 119, 255, 0.2)', paddingTop: '0.65rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} 
+                      style={{ color: 'var(--text)', fontWeight: 700, marginTop: '0.65rem', borderTop: '1px solid var(--border)', paddingTop: '0.65rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} 
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span>View All Services & Catalog</span>

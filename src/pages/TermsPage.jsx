@@ -26,7 +26,7 @@ export default function TermsPage() {
 
       <section className="section-padding">
         <div className="container" style={{ maxWidth: '850px' }}>
-          <div className="feature-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.75rem', color: '#D1D5DB', lineHeight: '1.7' }}>
+          <div className="feature-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.75rem', color: 'var(--text-muted)', lineHeight: '1.7' }}>
             <div>
               <h2 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '0.75rem' }}>1. Acceptance of Terms</h2>
               <p>
@@ -59,7 +59,7 @@ export default function TermsPage() {
               <h2 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '0.75rem' }}>5. Inquiries & Legal Notices</h2>
               <p>
                 For official legal notices or contractual inquiries, please contact our registered office in Hyderabad, India or email{' '}
-                <a href="mailto:contact@kolmagtech.com" style={{ color: '#008CFF' }}>contact@kolmagtech.com</a>.
+                <a href="mailto:contact@kolmagtech.com" style={{ color: 'var(--silver)' }}>contact@kolmagtech.com</a>.
               </p>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function PrivacyPage() {
 
       <section className="section-padding">
         <div className="container" style={{ maxWidth: '850px' }}>
-          <div className="feature-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.75rem', color: '#D1D5DB', lineHeight: '1.7' }}>
+          <div className="feature-card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.75rem', color: 'var(--text-muted)', lineHeight: '1.7' }}>
             <div>
               <h2 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '0.75rem' }}>1. Information We Collect</h2>
               <p>
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
               <h2 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '0.75rem' }}>4. Contact for Privacy Inquiries</h2>
               <p>
                 If you have questions regarding this Privacy Policy or wish to update or delete your details from our records, please reach out to our corporate office at{' '}
-                <a href="mailto:contact@kolmagtech.com" style={{ color: '#008CFF' }}>contact@kolmagtech.com</a>.
+                <a href="mailto:contact@kolmagtech.com" style={{ color: 'var(--silver)' }}>contact@kolmagtech.com</a>.
               </p>
             </div>
           </div>
